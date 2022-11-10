@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/Screen/BatDauChoi.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 
@@ -14,6 +15,8 @@ class _TrangChuState extends State<TrangChu> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+      height: MediaQuery.of(context).size.height,
+      width: MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
@@ -27,8 +30,8 @@ class _TrangChuState extends State<TrangChu> {
                 children: [
                   Image(
                     image: AssetImage('assets/logo.png'),
-                    height: 100,
-                    width: 180,
+                    height: 80,
+                    width: 150,
                     fit: BoxFit.cover,
                   )
                 ],
@@ -37,14 +40,17 @@ class _TrangChuState extends State<TrangChu> {
             Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(50, 20, 0, 100),
+                  padding: EdgeInsets.fromLTRB(50, 40, 0, 100),
                   child: Stack(
                     children: [
                       IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.menu),
-                        color: Colors.black,
-                      )
+                          onPressed: (() {}),
+                          icon: Image.asset(
+                            'assets/menu.png',
+                            height: 30,
+                            width: 30,
+                            color: HexColor('FFF323'),
+                          )),
                     ],
                   ),
                 )
@@ -65,7 +71,7 @@ class _TrangChuState extends State<TrangChu> {
                 child: Row(
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Image(
                           image: AssetImage('assets/user.png'),
                           height: 60,
@@ -208,10 +214,15 @@ class _TrangChuState extends State<TrangChu> {
           child: Center(
             child: ElevatedButton(
                 style: raisedButtonStyle,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const BatDauChoi()),
+                  );
+                },
                 child: Text(
                   'Bắt đầu chơi',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 25, fontFamily: 'FSAriston'),
                 )),
           ),
         )
@@ -221,11 +232,7 @@ class _TrangChuState extends State<TrangChu> {
 }
 
 final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
-  onPrimary: Colors.black,
-  primary: Color.fromRGBO(255, 238, 82, 100),
-  minimumSize: Size(300, 60),
-  padding: EdgeInsets.symmetric(horizontal: 16),
-  shape: const RoundedRectangleBorder(
-    borderRadius: BorderRadius.all(Radius.circular(10)),
-  ),
+  backgroundColor: HexColor('FFEE52'),
+  minimumSize: Size(250, 25),
+  side: const BorderSide(width: 2, color: Colors.black),
 );
