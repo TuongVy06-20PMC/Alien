@@ -41,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
           image: DecorationImage(
               image: AssetImage('assets/bg.png'), fit: BoxFit.cover)),
       child: Column(
-        
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Padding(
@@ -69,4 +68,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     )));
   }
-}
+}// thay doi
