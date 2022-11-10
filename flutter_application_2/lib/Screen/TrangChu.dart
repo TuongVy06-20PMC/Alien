@@ -10,312 +10,312 @@ class TrangChu extends StatefulWidget {
   State<TrangChu> createState() => _TrangChuState();
 }
 
-class _TrangChuState extends State<TrangChu> with TickerProviderStateMixin {
-  late TabController _tabController;
-  @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(length: 3, vsync: this);
-  }
-
+class _TrangChuState extends State<TrangChu> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: Container(
-        color: Color.fromRGBO(249, 187, 64, 50),
-        height: 120,
-        child: TabBar(
-          controller: _tabController,
-          labelColor: HexColor('FFEE52'),
-          unselectedLabelColor: Colors.white70,
-          indicatorSize: TabBarIndicatorSize.tab,
-          indicatorPadding: EdgeInsets.all(5.0),
-          indicatorColor: Colors.yellow,
-          indicator: BoxDecoration(
-              gradient:
-                  LinearGradient(colors: [HexColor('FFEE52'), Colors.green]),
-              borderRadius: BorderRadius.circular(70),
-              color: Colors.redAccent),
-          tabs: const <Widget>[
-            Tab(
-              icon: Icon(
-                Icons.account_circle,
-                size: 50,
-              ),
-            ),
-            Tab(
-              icon: Icon(
-                Icons.home,
-                size: 50,
-              ),
-            ),
-            Tab(
-              icon: Icon(
-                Icons.menu_book,
-                size: 50,
-              ),
-            ),
-          ],
-        ),
-      ),
-      body: TabBarView(
-        controller: _tabController,
-        children: <Widget>[
-          Center(
-            child: Text('Hồ sơ'),
-          ),
-          Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
-            ),
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(130, 20, 0, 0),
-                    child: Column(
-                      children: [
-                        Image(
-                          image: AssetImage('assets/logo.png'),
-                          height: 80,
-                          width: 150,
-                          fit: BoxFit.cover,
-                        )
-                      ],
-                    ),
+    return DefaultTabController(
+        initialIndex: 1,
+        length: 3,
+        child: Scaffold(
+          bottomNavigationBar: Container(
+            color: Color.fromRGBO(249, 187, 64, 50),
+            height: 120,
+            child: TabBar(
+              labelColor: HexColor('FFEE52'),
+              unselectedLabelColor: Colors.white70,
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicatorPadding: EdgeInsets.all(5.0),
+              indicatorColor: Colors.yellow,
+              indicator: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [HexColor('FFEE52'), Colors.green]),
+                  borderRadius: BorderRadius.circular(70),
+                  color: Colors.redAccent),
+              tabs: const <Widget>[
+                Tab(
+                  icon: Icon(
+                    Icons.account_circle,
+                    size: 50,
                   ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(50, 40, 0, 100),
-                        child: Stack(
-                          children: [
-                            IconButton(
-                                onPressed: (() {}),
-                                icon: Image.asset(
-                                  'assets/menu.png',
-                                  height: 30,
-                                  width: 30,
-                                  color: HexColor('FFF323'),
-                                )),
-                          ],
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Stack(
-                    children: [
-                      Positioned(
-                        child: Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(top: 13, left: 80),
-                              decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.9),
-                                  borderRadius: BorderRadius.circular(20)),
-                              height: 35,
-                              width: 160,
-                              child: Padding(
-                                padding: EdgeInsets.only(left: 25),
-                                child: Row(children: [
-                                  IconButton(
-                                      autofocus: false,
-                                      onPressed: (() {}),
-                                      icon: Image.asset(
-                                        'assets/money.png',
-                                        height: 20,
-                                        width: 20,
-                                      )),
-                                  const Text(
-                                    'Số xu nè',
-                                    style: TextStyle(
-                                        fontSize: 22,
-                                        fontFamily: 'FSAriston',
-                                        color: Colors.black),
-                                  ),
-                                ]),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 50),
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Row(
-                                children: const [
-                                  Image(
-                                    image: AssetImage('assets/user.png'),
-                                    height: 70,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 44),
-                          child: Row(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: HexColor('FFEE52'),
-                                    borderRadius: BorderRadius.circular(10)),
-                                height: 20,
-                                width: 80,
-                                child: Padding(
-                                    padding: EdgeInsets.zero,
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          'Cấp 1',
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontFamily: 'FSAriston'),
-                                        ),
-                                      ],
-                                    )),
-                              ),
-                            ],
-                          ),
-                        ),
-                        top: 50,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Padding(
-                      padding: EdgeInsets.fromLTRB(60, 15, 0, 0),
-                      child: Column(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Image.asset('assets/players.png'),
-                            iconSize: 50,
-                          ),
-                          Text(
-                            'Giao đấu',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'FSAriston',
-                                fontSize: 20),
-                          )
-                        ],
-                      )),
-                  Padding(
-                      padding: EdgeInsets.fromLTRB(150, 0, 0, 0),
-                      child: Column(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Image.asset('assets/ranking(1).png'),
-                            iconSize: 50,
-                          ),
-                          Text(
-                            'Xếp hạng',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'FSAriston',
-                                fontSize: 20),
-                          )
-                        ],
-                      )),
-                ],
-              ),
-              Row(
-                children: [
-                  Padding(
-                      padding: EdgeInsets.fromLTRB(60, 10, 0, 0),
-                      child: Column(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Image.asset('assets/job-search.png'),
-                            iconSize: 50,
-                          ),
-                          const Text(
-                            'Tìm kiếm',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'FSAriston',
-                                fontSize: 20),
-                          )
-                        ],
-                      )),
-                  Padding(
-                      padding: EdgeInsets.fromLTRB(150, 10, 0, 0),
-                      child: Column(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Image.asset('assets/analysis.png'),
-                            iconSize: 50,
-                          ),
-                          const Text(
-                            'Thống kê',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'FSAriston',
-                                fontSize: 20),
-                          )
-                        ],
-                      )),
-                ],
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 150),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: HexColor('FFEE52'),
-                    minimumSize: Size(280, 25),
-                    side: const BorderSide(width: 2, color: Colors.black),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      'Bắt đầu chơi',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'FSAriston',
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const BatDauChoi()));
-                  },
                 ),
+                Tab(
+                  icon: Icon(
+                    Icons.home,
+                    size: 50,
+                  ),
+                ),
+                Tab(
+                  icon: Icon(
+                    Icons.menu_book,
+                    size: 50,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          body: TabBarView(
+            children: <Widget>[
+              Center(
+                child: Text('Hồ sơ'),
               ),
-            ]),
+              Container(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(130, 20, 0, 0),
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage('assets/logo.png'),
+                                  height: 80,
+                                  width: 150,
+                                  fit: BoxFit.cover,
+                                )
+                              ],
+                            ),
+                          ),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(50, 40, 0, 100),
+                                child: Stack(
+                                  children: [
+                                    IconButton(
+                                        onPressed: (() {}),
+                                        icon: Image.asset(
+                                          'assets/menu.png',
+                                          height: 30,
+                                          width: 30,
+                                          color: HexColor('FFF323'),
+                                        )),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Stack(
+                            children: [
+                              Positioned(
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      margin:
+                                          EdgeInsets.only(top: 13, left: 80),
+                                      decoration: BoxDecoration(
+                                          color: Colors.white.withOpacity(0.9),
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      height: 35,
+                                      width: 160,
+                                      child: Padding(
+                                        padding: EdgeInsets.only(left: 25),
+                                        child: Row(children: [
+                                          IconButton(
+                                              autofocus: false,
+                                              onPressed: (() {}),
+                                              icon: Image.asset(
+                                                'assets/money.png',
+                                                height: 20,
+                                                width: 20,
+                                              )),
+                                          const Text(
+                                            'Số xu nè',
+                                            style: TextStyle(
+                                                fontSize: 22,
+                                                fontFamily: 'FSAriston',
+                                                color: Colors.black),
+                                          ),
+                                        ]),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 50),
+                                child: Container(
+                                  child: Row(
+                                    children: [
+                                      Row(
+                                        children: const [
+                                          Image(
+                                            image:
+                                                AssetImage('assets/user.png'),
+                                            height: 70,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: 44),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            color: HexColor('FFEE52'),
+                                            borderRadius:
+                                                BorderRadius.circular(10)),
+                                        height: 20,
+                                        width: 80,
+                                        child: Padding(
+                                            padding: EdgeInsets.zero,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  'Cấp 1',
+                                                  style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontFamily: 'FSAriston'),
+                                                ),
+                                              ],
+                                            )),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                top: 50,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Padding(
+                              padding: EdgeInsets.fromLTRB(60, 15, 0, 0),
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: Image.asset('assets/players.png'),
+                                    iconSize: 50,
+                                  ),
+                                  Text(
+                                    'Giao đấu',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'FSAriston',
+                                        fontSize: 20),
+                                  )
+                                ],
+                              )),
+                          Padding(
+                              padding: EdgeInsets.fromLTRB(150, 0, 0, 0),
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: Image.asset('assets/ranking(1).png'),
+                                    iconSize: 50,
+                                  ),
+                                  Text(
+                                    'Xếp hạng',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'FSAriston',
+                                        fontSize: 20),
+                                  )
+                                ],
+                              )),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Padding(
+                              padding: EdgeInsets.fromLTRB(60, 10, 0, 0),
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: Image.asset('assets/job-search.png'),
+                                    iconSize: 50,
+                                  ),
+                                  const Text(
+                                    'Tìm kiếm',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'FSAriston',
+                                        fontSize: 20),
+                                  )
+                                ],
+                              )),
+                          Padding(
+                              padding: EdgeInsets.fromLTRB(150, 10, 0, 0),
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: Image.asset('assets/analysis.png'),
+                                    iconSize: 50,
+                                  ),
+                                  const Text(
+                                    'Thống kê',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'FSAriston',
+                                        fontSize: 20),
+                                  )
+                                ],
+                              )),
+                        ],
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 150),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: HexColor('FFEE52'),
+                            minimumSize: Size(280, 25),
+                            side:
+                                const BorderSide(width: 2, color: Colors.black),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Text(
+                              'Bắt đầu chơi',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 30,
+                                fontFamily: 'FSAriston',
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const BatDauChoi()));
+                          },
+                        ),
+                      ),
+                    ]),
+              ),
+              Center(
+                child: Text('Luật chơi'),
+              ),
+            ],
           ),
-          Center(
-            child: Text('Luật chơi'),
-          ),
-        ],
-      ),
-    );
+        ));
   }
 }
