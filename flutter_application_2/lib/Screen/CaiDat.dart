@@ -5,35 +5,14 @@ import 'package:flutter_screen_wake/flutter_screen_wake.dart';
 import 'dart:async';
 import 'package:hexcolor/hexcolor.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CaiDat extends StatefulWidget {
+  const CaiDat({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Audio Player'),
-    );
-  }
+  State<CaiDat> createState() => _CaiDatState();
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _CaiDatState extends State<CaiDat> {
   double brightness =0.0;
   bool toggle=false;
 
@@ -82,7 +61,6 @@ Future<void>initPlatformBrightness()async{
       });
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
