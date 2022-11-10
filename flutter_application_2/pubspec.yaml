@@ -81,6 +81,11 @@ flutter:
     - assets/menu.png
     - assets/x2.png
     - assets/boqua.png
+    - assets/party-popper.png
+    - assets/product-lauch.png
+    - assets/eye-open.png
+    - assets/arrow.png
+    - assets/right-arrow.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

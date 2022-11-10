@@ -21,7 +21,7 @@ class _TrangChuState extends State<TrangChu> {
         image: DecorationImage(
             image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
       ),
-      child: Column(children: [
+      child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         Row(
           children: [
             Padding(
@@ -59,75 +59,94 @@ class _TrangChuState extends State<TrangChu> {
           ],
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(40)),
-                width: 200,
-                height: 60,
-                child: Row(
-                  children: [
-                    Row(
-                      children: const [
-                        Image(
-                          image: AssetImage('assets/user.png'),
-                          height: 60,
-                          fit: BoxFit.cover,
+            Stack(
+              children: [
+                Positioned(
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 13, left: 80),
+                        decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(20)),
+                        height: 35,
+                        width: 160,
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Row(children: [
+                            IconButton(
+                                autofocus: false,
+                                onPressed: (() {}),
+                                icon: Image.asset(
+                                  'assets/money.png',
+                                  height: 20,
+                                  width: 20,
+                                )),
+                            const Text(
+                              'Số xu nè',
+                              style: TextStyle(
+                                  fontSize: 22,
+                                  fontFamily: 'FSAriston',
+                                  color: Colors.black),
+                            ),
+                          ]),
                         ),
-                        Image(
-                          image: AssetImage('assets/money.png'),
-                          height: 30,
-                          fit: BoxFit.cover,
-                        ),
-                        Text(
-                          ' 50000',
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 50),
+                  child: Container(
+                    child: Row(
+                      children: [
+                        Row(
+                          children: const [
+                            Image(
+                              image: AssetImage('assets/user.png'),
+                              height: 70,
+                              fit: BoxFit.cover,
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
+                  ),
                 ),
-              ),
-            ),
-          ],
-        ),
-        Padding(
-          padding: EdgeInsets.fromLTRB(55, 0, 0, 0),
-          child: Row(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                    color: Color.fromRGBO(255, 238, 82, 100),
-                    borderRadius: BorderRadius.circular(6)),
-                height: 15,
-                width: 50,
-                child: Padding(
-                    padding: EdgeInsets.fromLTRB(10, 2, 0, 0),
+                Positioned(
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 44),
                     child: Row(
                       children: [
-                        Text(
-                          'Cấp ',
-                          style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.bold),
+                        Container(
+                          decoration: BoxDecoration(
+                              color: HexColor('FFEE52'),
+                              borderRadius: BorderRadius.circular(10)),
+                          height: 20,
+                          width: 80,
+                          child: Padding(
+                              padding: EdgeInsets.zero,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Cấp 1',
+                                    style: TextStyle(
+                                        fontSize: 16, fontFamily: 'FSAriston'),
+                                  ),
+                                ],
+                              )),
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              '1',
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        )
                       ],
-                    )),
-              ),
-            ],
-          ),
+                    ),
+                  ),
+                  top: 50,
+                ),
+              ],
+            ),
+          ],
         ),
         Row(
           children: [
@@ -180,7 +199,7 @@ class _TrangChuState extends State<TrangChu> {
                       icon: Image.asset('assets/job-search.png'),
                       iconSize: 50,
                     ),
-                   const Text(
+                    const Text(
                       'Tìm kiếm',
                       style: TextStyle(
                           color: Colors.white,
@@ -198,7 +217,7 @@ class _TrangChuState extends State<TrangChu> {
                       icon: Image.asset('assets/analysis.png'),
                       iconSize: 50,
                     ),
-                   const Text(
+                    const Text(
                       'Thống kê',
                       style: TextStyle(
                           color: Colors.white,
@@ -210,36 +229,34 @@ class _TrangChuState extends State<TrangChu> {
           ],
         ),
         Padding(
-              padding: EdgeInsets.only(top: 150),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: HexColor('FFEE52'),
-                  minimumSize: Size(280, 25),
-                  side: const BorderSide(width: 2, color: Colors.black),
+          padding: EdgeInsets.only(top: 150),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: HexColor('FFEE52'),
+              minimumSize: Size(280, 25),
+              side: const BorderSide(width: 2, color: Colors.black),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'Bắt đầu chơi',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: 'FSAriston',
+                  color: Colors.black,
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    'Bắt đầu chơi',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontFamily: 'FSAriston',
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const BatDauChoi()),
-                );
-                },
               ),
             ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const BatDauChoi()),
+              );
+            },
+          ),
+        ),
       ]),
     ));
   }
 }
-
-

@@ -1,5 +1,6 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 
@@ -238,7 +239,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor:Colors.white,
+                              backgroundColor: Colors.white,
                               minimumSize: Size(350, 25),
                               side: const BorderSide(
                                   width: 3, color: Colors.black),
@@ -261,7 +262,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                           /* Padding(padding: EdgeInsets.only(right: 130),
+                            /* Padding(padding: EdgeInsets.only(right: 130),
                             child: Column( mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text('Sai rồi!!!!', style: TextStyle(
@@ -298,7 +299,14 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                     ),
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const KetThucLuotChoi()),
+                                  );
+                                },
                               ),
                             ),
                           ],
