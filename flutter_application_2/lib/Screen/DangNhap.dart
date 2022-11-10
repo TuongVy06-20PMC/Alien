@@ -1,6 +1,7 @@
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'Screen1.dart';
+import 'TrangChu.dart';
 
 class DangNhap extends StatefulWidget {
   const DangNhap({super.key});
@@ -36,7 +37,7 @@ class _DangNhapState extends State<DangNhap> {
                       'ĐĂNG NHẬP',
                       style: TextStyle(
                         fontSize: 65,
-                        fontFamily: 'FS',
+                        fontFamily: 'FSAriston',
                         foreground: Paint()
                           ..style = PaintingStyle.stroke
                           ..strokeWidth = 5
@@ -48,37 +49,11 @@ class _DangNhapState extends State<DangNhap> {
                       'ĐĂNG NHẬP',
                       style: TextStyle(
                         fontSize: 65,
-                        fontFamily: 'FS',
+                        fontFamily: 'FSAriston',
                         color: HexColor('000000'),
                       ),
                     ),
                   ],
-                )),
-            const Padding(
-                padding: EdgeInsets.all(10),
-                child: SizedBox(
-                  width: 280,
-                  height: 50,
-                  child: TextField(
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'FS',
-                      fontSize: 25,
-                    ),
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      enabledBorder: OutlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
-                      border: OutlineInputBorder(),
-                      hintText: "Tên đăng nhập",
-                      hintStyle: TextStyle(
-                          color: Colors.grey,
-                          fontFamily: 'FS',
-                          fontSize: 25),
-                    ),
-                  ),
                 )),
             const Padding(
                 padding: EdgeInsets.all(10),
@@ -98,10 +73,36 @@ class _DangNhapState extends State<DangNhap> {
                           borderSide:
                               BorderSide(color: Colors.black, width: 2)),
                       border: OutlineInputBorder(),
+                      hintText: "Tên đăng nhập",
+                      hintStyle: TextStyle(
+                          color: Colors.grey,
+                          fontFamily: 'FSAriston',
+                          fontSize: 25),
+                    ),
+                  ),
+                )),
+            const Padding(
+                padding: EdgeInsets.all(10),
+                child: SizedBox(
+                  width: 280,
+                  height: 50,
+                  child: TextField(
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'FSAristonAriston',
+                      fontSize: 25,
+                    ),
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.black, width: 2)),
+                      border: OutlineInputBorder(),
                       hintText: "Mật khẩu",
                       hintStyle: TextStyle(
                           color: Colors.grey,
-                          fontFamily: 'FS',
+                          fontFamily: 'FSAriston',
                           fontSize: 25),
                     ),
                   ),
@@ -113,7 +114,7 @@ class _DangNhapState extends State<DangNhap> {
                   'Quên mật khẩu',
                   style: TextStyle(
                       color: Colors.white,
-                      fontFamily: 'FS',
+                      fontFamily: 'FSAriston',
                       fontSize: 20,
                       fontStyle: FontStyle.normal),
                 ),
@@ -135,12 +136,16 @@ class _DangNhapState extends State<DangNhap> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
-                      fontFamily: 'FS',
+                      fontFamily: 'FSAriston',
                       color: Colors.black,
                     ),
                   ),
                 ),
                 onPressed: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TrangChu()),
+                );
                 },
               ),
             ),
@@ -153,7 +158,7 @@ class _DangNhapState extends State<DangNhap> {
                     'Bạn chưa có tài khoản??',
                     style: TextStyle(
                       color: Colors.white,
-                      fontFamily: 'FS',
+                      fontFamily: 'FSAriston',
                       fontSize: 20,
                     ),
                   ),
@@ -162,12 +167,13 @@ class _DangNhapState extends State<DangNhap> {
                       'Đăng ký ngay',
                       style: TextStyle(
                           color: HexColor('F0CB05'),
-                          fontFamily: 'FS',
+                          fontFamily: 'FSAriston',
                           fontSize: 20,
                           fontStyle: FontStyle.italic),
                     ),
                     onPressed: () {
                       
+              
                     },
                   ),
                 ],

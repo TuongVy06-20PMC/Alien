@@ -48,7 +48,7 @@ class _Screen1State extends State<Screen1> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 30,
-                        fontFamily: 'FS',
+                        fontFamily: 'FSAriston',
                         color: Colors.black,
                       ),
                     ),
@@ -71,7 +71,7 @@ class _Screen1State extends State<Screen1> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 30,
-                        fontFamily: 'FS',
+                        fontFamily: 'FSAriston',
                         color: Colors.black,
                       ),
                     ),

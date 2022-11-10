@@ -94,7 +94,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: FS
+    - family: FSAriston
       fonts:
         - asset: fonts/FS-Ariston.ttf
   #       - asset: fonts/Schyler-Italic.ttf
