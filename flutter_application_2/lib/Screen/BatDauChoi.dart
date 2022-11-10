@@ -238,7 +238,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor:HexColor('3EC70B'),
+                              backgroundColor:Colors.white,
                               minimumSize: Size(350, 25),
                               side: const BorderSide(
                                   width: 3, color: Colors.black),
@@ -261,6 +261,22 @@ class _BatDauChoiState extends State<BatDauChoi> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
+                           /* Padding(padding: EdgeInsets.only(right: 130),
+                            child: Column( mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text('Sai rồi!!!!', style: TextStyle(
+                                  fontFamily: 'FSAriston',
+                                  fontSize: 25
+                                ),),
+                                Text('+ 0 xu', style: TextStyle(
+                                  color: Colors.red,
+                                  fontFamily: 'FSAriston',
+                                  fontSize: 30
+                                ),)
+                              ],
+
+                            ),
+                            ),*/
                             Padding(
                               padding: EdgeInsets.only(right: 22, top: 20),
                               child: ElevatedButton(
