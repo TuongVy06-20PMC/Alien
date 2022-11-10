@@ -76,6 +76,10 @@ flutter:
     - assets/money.png
     - assets/h1.png
     - assets/50.png
+    - assets/delete.png
+    - assets/menu.png
+    - assets/x2.png
+    - assets/boqua.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
