@@ -2,6 +2,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
+import 'DangNhap.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
@@ -75,7 +76,13 @@ class _Screen1State extends State<Screen1> {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DangNhap()),
+                            );
+                  },
                 ),
               )
             ],
