@@ -11,6 +11,7 @@ class BatDauChoi extends StatefulWidget {
 }
 
 class _BatDauChoiState extends State<BatDauChoi> {
+  Color? color = Colors.white;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -237,7 +238,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
+                              backgroundColor:HexColor('3EC70B'),
                               minimumSize: Size(350, 25),
                               side: const BorderSide(
                                   width: 3, color: Colors.black),

@@ -132,7 +132,7 @@ class _TrangChuState extends State<TrangChu> {
         Row(
           children: [
             Padding(
-                padding: EdgeInsets.fromLTRB(50, 15, 0, 0),
+                padding: EdgeInsets.fromLTRB(60, 15, 0, 0),
                 child: Column(
                   children: [
                     IconButton(
@@ -144,7 +144,7 @@ class _TrangChuState extends State<TrangChu> {
                       'Giao đấu',
                       style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                          fontFamily: 'FSAriston',
                           fontSize: 20),
                     )
                   ],
@@ -162,7 +162,7 @@ class _TrangChuState extends State<TrangChu> {
                       'Xếp hạng',
                       style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                          fontFamily: 'FSAriston',
                           fontSize: 20),
                     )
                   ],
@@ -172,7 +172,7 @@ class _TrangChuState extends State<TrangChu> {
         Row(
           children: [
             Padding(
-                padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                padding: EdgeInsets.fromLTRB(60, 10, 0, 0),
                 child: Column(
                   children: [
                     IconButton(
@@ -180,17 +180,17 @@ class _TrangChuState extends State<TrangChu> {
                       icon: Image.asset('assets/job-search.png'),
                       iconSize: 50,
                     ),
-                    Text(
+                   const Text(
                       'Tìm kiếm',
                       style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                          fontFamily: 'FSAriston',
                           fontSize: 20),
                     )
                   ],
                 )),
             Padding(
-                padding: EdgeInsets.fromLTRB(150, 0, 0, 0),
+                padding: EdgeInsets.fromLTRB(150, 10, 0, 0),
                 child: Column(
                   children: [
                     IconButton(
@@ -198,11 +198,11 @@ class _TrangChuState extends State<TrangChu> {
                       icon: Image.asset('assets/analysis.png'),
                       iconSize: 50,
                     ),
-                    Text(
+                   const Text(
                       'Thống kê',
                       style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                          fontFamily: 'FSAriston',
                           fontSize: 20),
                     )
                   ],
@@ -210,29 +210,36 @@ class _TrangChuState extends State<TrangChu> {
           ],
         ),
         Padding(
-          padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
-          child: Center(
-            child: ElevatedButton(
-                style: raisedButtonStyle,
+              padding: EdgeInsets.only(top: 150),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: HexColor('FFEE52'),
+                  minimumSize: Size(280, 25),
+                  side: const BorderSide(width: 2, color: Colors.black),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'Bắt đầu chơi',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontFamily: 'FSAriston',
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const BatDauChoi()),
-                  );
+                  context,
+                  MaterialPageRoute(builder: (context) => const BatDauChoi()),
+                );
                 },
-                child: Text(
-                  'Bắt đầu chơi',
-                  style: TextStyle(fontSize: 25, fontFamily: 'FSAriston'),
-                )),
-          ),
-        )
+              ),
+            ),
       ]),
     ));
   }
 }
 
-final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
-  backgroundColor: HexColor('FFEE52'),
-  minimumSize: Size(250, 25),
-  side: const BorderSide(width: 2, color: Colors.black),
-);
+
