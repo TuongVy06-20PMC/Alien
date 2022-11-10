@@ -43,21 +43,27 @@ class _BatDauChoiState extends State<BatDauChoi> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Icon(
-                            Icons.close,
-                            size: 40,
-                            color: HexColor('FFEE52'),
-                          ),
-                          Icon(
-                            Icons.menu,
-                            size: 40,
-                            color: HexColor('FFEE52'),
-                          )
+                          IconButton(
+                              onPressed: (() {}),
+                              icon: Image.asset(
+                                'assets/delete.png',
+                                height: 25,
+                                width: 25,
+                                color: HexColor('FFF323'),
+                              )),
+                          IconButton(
+                              onPressed: (() {}),
+                              icon: Image.asset(
+                                'assets/menu.png',
+                                height: 30,
+                                width: 30,
+                                color: HexColor('FFF323'),
+                              )),
                         ],
                       ),
                       Container(
                           //padding: EdgeInsets.only(bottom: 10),
-                          width: MediaQuery.of(context).size.width / 1.5,
+                          width: MediaQuery.of(context).size.width / 1.3,
                           child: const Text(
                             'Tàu Apollo số bao nhiêu được phóng vào ngày 31/1/1971?',
                             textAlign: TextAlign.center,
@@ -97,14 +103,14 @@ class _BatDauChoiState extends State<BatDauChoi> {
                               children: [
                                 Padding(
                                     padding: EdgeInsets.only(
-                                      right: 20,
+                                      right: 30,
                                     ),
                                     child: Row(
                                       children: [
                                         Icon(
                                           Icons.timelapse,
                                           size: 30,
-                                          color: HexColor('FFEE52'),
+                                          color: HexColor('FFC600'),
                                         ),
                                         const Text(
                                           '00:00',
@@ -121,7 +127,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                         Icon(
                                           Icons.monetization_on,
                                           size: 30,
-                                          color: HexColor('FFEE52'),
+                                          color: HexColor('FFC600'),
                                         ),
                                         const Text(
                                           'Số xu',
@@ -137,7 +143,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
-                              minimumSize: Size(300, 25),
+                              minimumSize: Size(350, 25),
                               side: const BorderSide(
                                   width: 3, color: Colors.black),
                             ),
@@ -161,7 +167,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
-                              minimumSize: Size(300, 25),
+                              minimumSize: Size(350, 25),
                               side: const BorderSide(
                                   width: 3, color: Colors.black),
                             ),
@@ -185,7 +191,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
-                              minimumSize: Size(300, 25),
+                              minimumSize: Size(350, 25),
                               side: const BorderSide(
                                   width: 3, color: Colors.black),
                             ),
@@ -209,7 +215,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
-                              minimumSize: Size(300, 25),
+                              minimumSize: Size(350, 25),
                               side: const BorderSide(
                                   width: 3, color: Colors.black),
                             ),
@@ -232,10 +238,10 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(right: 45),
+                              padding: EdgeInsets.only(right: 22,top: 20),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: HexColor('FFEE52'),
+                                  backgroundColor: HexColor('F2FA5A'),
                                   minimumSize: Size(80, 10),
                                   side: const BorderSide(
                                       width: 2, color: Colors.black),
@@ -258,120 +264,120 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           ],
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 30),
-                          child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(right: 20),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: HexColor('FFF6A1'),
-                                  minimumSize: Size(60, 60),
-                                  /*side: const BorderSide(
+                            margin: EdgeInsets.only(top: 30),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(right: 23),
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: HexColor('FF4848'),
+                                      minimumSize: Size(80, 80),
+                                      /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
+                                    ),
+                                    child: Padding(
+                                        padding: EdgeInsets.all(0),
+                                        child: Column(
+                                          children: [
+                                            Image.asset(
+                                              'assets/50.png',
+                                              width: 50,
+                                              height: 50,
+                                            ),
+                                            const Text(
+                                              '-100 xu',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontSize: 25,
+                                                fontFamily: 'FS',
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ],
+                                        )),
+                                    onPressed: () {},
+                                  ),
                                 ),
-                                child: Padding(
-                                    padding: EdgeInsets.all(0),
-                                    child: Column(
-                                      children: [
-                                        Image.asset(
-                                          'assets/50.png',
-                                          width: 50,
-                                          height: 50,
-                                        ),
-                                        const Text(
-                                          '-100 xu',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 25,
-                                            fontFamily: 'FS',
-                                            color: Colors.red,
-                                          ),
-                                        ),
-                                      ],
-                                    )),
-                                onPressed: () {},
-                              ),
-                            ),
-                             Padding(
-                              padding: EdgeInsets.only(right: 20),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: HexColor('FFF6A1'),
-                                  minimumSize: Size(60, 60),
-                                  /*side: const BorderSide(
+                                Padding(
+                                  padding: EdgeInsets.only(right: 23),
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: HexColor('F037A5'),
+                                     minimumSize: Size(80, 80),
+                                      /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
+                                    ),
+                                    child: Padding(
+                                        padding: EdgeInsets.only(left: 2,right: 2),
+                                        child: Column(
+                                          children: [
+                                            Image.asset(
+                                              'assets/x2.png',
+                                              width: 50,
+                                              height: 50,
+                                            ),
+                                            const Text(
+                                              '-150 xu',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontSize: 25,
+                                                fontFamily: 'FS',
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ],
+                                        )),
+                                    onPressed: () {},
+                                  ),
                                 ),
-                                child: Padding(
-                                    padding: EdgeInsets.all(0),
-                                    child: Column(
-                                      children: [
-                                        Image.asset(
-                                          'assets/50.png',
-                                          width: 50,
-                                          height: 50,
-                                        ),
-                                        const Text(
-                                          '-100 xu',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 25,
-                                            fontFamily: 'FS',
-                                            color: Colors.red,
-                                          ),
-                                        ),
-                                      ],
-                                    )),
-                                onPressed: () {},
-                              ),
-                            ),
-                             Padding(
-                              padding: EdgeInsets.only(right: 0),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: HexColor('FFF6A1'),
-                                  minimumSize: Size(60, 60),
-                                  /*side: const BorderSide(
+                                
+                                Padding(
+                                  padding: EdgeInsets.only(right: 0),
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: HexColor('3EC70B'),
+                                      minimumSize: Size(80, 80),
+                                      /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
+                                    ),
+                                    child: 
+                                    Padding(
+                                        padding: EdgeInsets.all(0),
+                                        child: Column(
+                                          children: [
+                                            Image.asset(
+                                              'assets/boqua.png',
+                                              width: 48,
+                                              height: 48,
+                                            ),
+                                            const Text(
+                                              '-250 xu',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontSize: 25,
+                                                fontFamily: 'FS',
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ],
+                                        )),
+                                    onPressed: () {},
+                                  ),
                                 ),
-                                child: Padding(
-                                    padding: EdgeInsets.all(0),
-                                    child: Column(
-                                      children: [
-                                        Image.asset(
-                                          'assets/50.png',
-                                          width: 50,
-                                          height: 50,
-                                        ),
-                                        const Text(
-                                          '-100 xu',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 25,
-                                            fontFamily: 'FS',
-                                            color: Colors.red,
-                                          ),
-                                        ),
-                                      ],
-                                    )),
-                                onPressed: () {},
-                              ),
-                            ),
-                          ],
-                        )
-                        )
-                        
+                              ],
+                            ))
                       ],
                     ),
                   ),
                   const Positioned(
-                      left: 30,
-                      bottom: 455,
+                      left: 20,
+                      bottom: 450,
                       child: Image(
                         image: AssetImage('assets/monster.png'),
-                        height: 95,
-                        width: 95,
+                        height: 100,
+                        width: 100,
                       )),
                 ],
               )
