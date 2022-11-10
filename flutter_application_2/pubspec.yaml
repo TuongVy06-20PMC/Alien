@@ -75,6 +75,7 @@ flutter:
     - assets/ranking(1).png
     - assets/money.png
     - assets/h1.png
+    - assets/50.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
