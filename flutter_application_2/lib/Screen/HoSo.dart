@@ -26,8 +26,8 @@ class _HoSoState extends State<HoSo> {
       ),
       child: Row(mainAxisAlignment: MainAxisAlignment.center,
         children: [
-            Container(
-              child: Column(
+            Container( margin: EdgeInsets.only(top: 30),
+              child: Column( mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Image.asset(
                           'assets/logo.png',
@@ -39,7 +39,7 @@ class _HoSoState extends State<HoSo> {
                           height: 60,
                           fit: BoxFit.cover,
                         ),
-                  Container(
+                  Container( 
                     decoration: BoxDecoration(
                     color: HexColor('FFEE52'),
                     borderRadius: BorderRadius.circular(6)),
@@ -50,7 +50,7 @@ class _HoSoState extends State<HoSo> {
                     child: Row(
                       children: [
                         Text(
-                          'Cấp 1 ',
+                          'Cấp 1 ', textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 11, fontWeight: FontWeight.bold,fontFamily: 'FSAriston'),
                         ),]

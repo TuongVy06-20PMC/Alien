@@ -1,8 +1,10 @@
 import 'package:flutter_application_2/Screen/DangKy.dart';
+import 'package:flutter_application_2/Screen/QuenMatKhau.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'Screen1.dart';
+import 'QuenMatKhau.dart';
 
 class DangNhap extends StatefulWidget {
   const DangNhap({super.key});
@@ -16,11 +18,13 @@ class _DangNhapState extends State<DangNhap> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      child: Container(
+      child:ListView(children: [
+        Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(color: HexColor('0C205B')),
-        child: Column(
+        child: 
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
@@ -120,7 +124,10 @@ class _DangNhapState extends State<DangNhap> {
                       fontStyle: FontStyle.normal),
                 ),
                 onPressed: () {
-
+                   Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const QuenMatKhau()),
+                );
                 },
               ),
             ),
@@ -169,7 +176,7 @@ class _DangNhapState extends State<DangNhap> {
                     child: Text(
                       'Đăng ký ngay',
                       style: TextStyle(
-                          color: HexColor('F0CB05'),
+                          color: HexColor('F2FA5A'),
                           fontFamily: 'FSAriston',
                           fontSize: 20,
                           fontStyle: FontStyle.italic),
@@ -187,6 +194,8 @@ class _DangNhapState extends State<DangNhap> {
           ],
         ),
       ),
+
+      ],) 
     ));
   }
 }

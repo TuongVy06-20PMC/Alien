@@ -1,8 +1,10 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
+import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
+import 'TrangChu.dart';
 
 class BatDauChoi extends StatefulWidget {
   const BatDauChoi({super.key});
@@ -46,7 +48,14 @@ class _BatDauChoiState extends State<BatDauChoi> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           IconButton(
-                              onPressed: (() {}),
+                              onPressed: (() {
+                                 Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const TrangChu()),
+                                  );
+                              }),
                               icon: Image.asset(
                                 'assets/delete.png',
                                 height: 25,
@@ -54,7 +63,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                 color: HexColor('FFF323'),
                               )),
                           IconButton(
-                              onPressed: (() {}),
+                              onPressed: (){},
                               icon: Image.asset(
                                 'assets/menu.png',
                                 height: 30,

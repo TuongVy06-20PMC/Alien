@@ -15,7 +15,6 @@ class TrangChu extends StatefulWidget {
 class _TrangChuState extends State<TrangChu> {
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
   GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
-  final PageStorageBucket bucket = PageStorageBucket();
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

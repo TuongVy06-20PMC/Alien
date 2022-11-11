@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'DangNhap.dart';
 
 class QuenMatKhau extends StatefulWidget {
   const QuenMatKhau({super.key});
@@ -94,12 +95,12 @@ class _QuenMatKhauState extends State<QuenMatKhau> {
                  ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                      backgroundColor: HexColor('FFEE52'),
-                  minimumSize: Size(280, 25),
+                  minimumSize: Size(280, 50),
                   side: const BorderSide(width: 2, color: Colors.black),
                   ),
                   icon: Icon(Icons.email_outlined,color: Colors.black,), 
                   label: Text('Đặt lại mật khẩu',style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 23,
                       fontFamily: 'FSAriston',
                       color: Colors.black,
                     ),),
