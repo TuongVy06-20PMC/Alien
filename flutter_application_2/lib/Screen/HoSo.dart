@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/Screen/ChinhSuaHoSo.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 
@@ -172,7 +173,13 @@ class _HoSoState extends State<HoSo> {
                                 fontSize: 20,
                                 ),
                           ),
-                          onPressed: null
+                          onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const ChinhSuaHoSo()),
+                            );
+                          }
                         ),
                         )
                 ],

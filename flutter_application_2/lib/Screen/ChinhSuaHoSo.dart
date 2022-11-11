@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 
-class HoSo extends StatefulWidget {
-  const HoSo({super.key});
+class ChinhSuaHoSo extends StatefulWidget {
+  const ChinhSuaHoSo({super.key});
 
   @override
-  State<HoSo> createState() => _HoSoState();
+  State<ChinhSuaHoSo> createState() => _ChinhSuaHoSoState();
 }
 
-class _HoSoState extends State<HoSo> {
+class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
    TextEditingController dateinput = TextEditingController(); 
    void initState() {
     dateinput.text = ""; 

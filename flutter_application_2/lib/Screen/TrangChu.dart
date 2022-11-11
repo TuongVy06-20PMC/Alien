@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
+import 'package:flutter_application_2/Screen/HoSo.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 import '../component/menu.dart';
@@ -12,6 +13,7 @@ class TrangChu extends StatefulWidget {
 }
 
 class _TrangChuState extends State<TrangChu> {
+   BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
   GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
@@ -21,10 +23,46 @@ class _TrangChuState extends State<TrangChu> {
         child: Scaffold(
           key: _sKey,
           endDrawer: Menu(),
+          bottomNavigationBar: Container(
+            color: Color.fromRGBO(249, 187, 64, 50),
+            height: 120,
+            child: TabBar(
+              labelColor: HexColor('FFEE52'),
+              unselectedLabelColor: Colors.white70,
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicatorPadding: EdgeInsets.all(5.0),
+              indicatorColor: Colors.yellow,
+              indicator: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [HexColor('FFEE52'), Colors.green]),
+                  borderRadius: BorderRadius.circular(70),
+                  color: Colors.redAccent),
+              tabs: const <Widget>[
+                Tab(
+                  icon: Icon(
+                    Icons.account_circle,
+                    size: 50,
+                  ),
+                ),
+                Tab(
+                  icon: Icon(
+                    Icons.home,
+                    size: 50,
+                  ),
+                ),
+                Tab(
+                  icon: Icon(
+                    Icons.menu_book,
+                    size: 50,
+                  ),
+                ),
+              ],
+            ),
+          ),
           body: TabBarView(
             children: <Widget>[
               Center(
-                child: Text('Hồ sơ'),
+                child: HoSo(),
               ),
               Container(
                 height: MediaQuery.of(context).size.height,
@@ -58,7 +96,7 @@ class _TrangChuState extends State<TrangChu> {
                                 child: Stack(
                                   children: [
                                     IconButton(
-                                        onPressed: ()=>_sKey.currentState?.openEndDrawer(),
+                                         onPressed: ()=>_sKey.currentState?.openEndDrawer(),
                                         icon: Image.asset(
                                           'assets/menu.png',
                                           height: 30,
