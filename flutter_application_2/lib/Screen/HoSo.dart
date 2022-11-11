@@ -178,14 +178,15 @@ class _HoSoState extends State<HoSo> {
                             fontFamily: 'FSAriston',
                             fontSize: 20,
                           ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ChinhSuaHoSo()),
-                          );
-                        }),
+
+                          onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const ChinhSuaHoSo()),
+                            );
+                          }
+
                   )
                 ],
               ),

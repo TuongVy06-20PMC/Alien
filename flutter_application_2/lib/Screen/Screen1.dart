@@ -1,5 +1,6 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_2/Screen/DangKy.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'DangNhap.dart';
@@ -53,7 +54,13 @@ class _Screen1State extends State<Screen1> {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DangKy()),
+                            );
+                  },
                 ),
               ),
               Padding(
