@@ -13,7 +13,9 @@ class TrangChu extends StatefulWidget {
 }
 
 class _TrangChuState extends State<TrangChu> {
-   BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
+
+  BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
+
   GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
@@ -96,7 +98,8 @@ class _TrangChuState extends State<TrangChu> {
                                 child: Stack(
                                   children: [
                                     IconButton(
-                                         onPressed: ()=>_sKey.currentState?.openEndDrawer(),
+                                        onPressed: () =>
+                                            _sKey.currentState?.openEndDrawer(),
                                         icon: Image.asset(
                                           'assets/menu.png',
                                           height: 30,

@@ -38,8 +38,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   hexcolor: ^3.0.1
   intl: ^0.17.0
-  audioplayers: ^1.1.1
-  flutter_screen_wake: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +63,26 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
+
+    - assets/bg.png
+    - assets/bg-1.png
+    - assets/logo.png
+    - assets/fast-forward.png
+    - assets/monster.png
+    - assets/user.png
+    - assets/analysis.png
+    - assets/job-search.png
+    - assets/kung-fu.png
+    - assets/players.png
+    - assets/ranking(1).png
+    - assets/money.png
+    - assets/h1.png
+    - assets/50.png
+    - assets/delete.png
+    - assets/menu.png
+    - assets/x2.png
+    - assets/boqua.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -79,7 +96,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: FSAriston
+    - family: FS
       fonts:
         - asset: fonts/FS-Ariston.ttf
   #       - asset: fonts/Schyler-Italic.ttf

@@ -246,44 +246,83 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                       ),
                                     ],
                                   )),
-                              onPressed: () {},
+                              onPressed: () => showDialog<String>(
+                                      context: context,
+                                      builder: (BuildContext context) =>
+                                          AlertDialog(
+                                            backgroundColor: HexColor('FFFDA2'),
+                                            title:
+                                                 Text('Lưu ý', style: TextStyle(
+                                                  color: HexColor('0C205B'),
+                                                  fontSize: 25,
+                                                  fontFamily: 'FSAriston'
+                                                ),),
+                                            content: const Text(
+                                                'Khi bạn chơi lại hệ thống sẽ không tính điểm hoặc thưởng'),
+                                            actions: <Widget>[
+                                              Stack(
+                                                children: [
+                                                  Row( mainAxisAlignment: MainAxisAlignment.center,
+                                                    children: [
+                                                      TextButton(
+                                                        style: TextButton.styleFrom(
+                                                          backgroundColor: HexColor('0C205B'),
+                                                          shadowColor: Colors.white
+                                                        ),
+                                                onPressed: () => Navigator.pop(
+                                                    context, 'OK'),
+                                                child:  Text('OK', style: TextStyle(
+                                                  color: HexColor('FFFDA2'),
+                                                  fontSize: 20,
+                                                  fontFamily: 'FSAriston'
+                                                ),),
+                                              ),
+
+                                                    ],
+                                                  )
+                                                  
+                                                ],
+
+                                              ),
+                                              
+                                              
+                                            ],
+                                          ))
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(right: 10),
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: HexColor('FFEE52'),
-                                minimumSize: Size(70, 60),
-                                side: const BorderSide(
-                                    width: 2, color: Colors.black),
-                              ),
-                              child: Padding(
-                                  padding: EdgeInsets.all(0),
-                                  child: Row(
-                                    children: [
-                                      const Padding(
-                                        padding: EdgeInsets.all(2),
-                                        child: Text(
-                                          'Xem lại',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 22,
-                                            fontFamily: 'FSAriston',
-                                            color: Colors.black,
+                              padding: EdgeInsets.only(right: 10),
+                              child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: HexColor('FFEE52'),
+                                    minimumSize: Size(70, 60),
+                                    side: const BorderSide(
+                                        width: 2, color: Colors.black),
+                                  ),
+                                  child: Padding(
+                                      padding: EdgeInsets.all(0),
+                                      child: Row(
+                                        children: [
+                                          const Padding(
+                                            padding: EdgeInsets.all(2),
+                                            child: Text(
+                                              'Xem lại',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontSize: 22,
+                                                fontFamily: 'FSAriston',
+                                                color: Colors.black,
+                                              ),
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                      Image.asset(
-                                        'assets/eye-open.png',
-                                        height: 25,
-                                        width: 25,
-                                      ),
-                                    ],
-                                  )),
-                              onPressed: () {},
-                            ),
-                          ),
+                                          Image.asset(
+                                            'assets/eye-open.png',
+                                            height: 25,
+                                            width: 25,
+                                          ),
+                                        ],
+                                      )),
+                                  onPressed: () {})),
                           Padding(
                             padding: EdgeInsets.zero,
                             child: ElevatedButton(
