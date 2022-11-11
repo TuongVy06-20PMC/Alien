@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 30,
-                  fontFamily: 'FS',
+                  fontFamily: 'FSAriston',
                   color: Colors.black,
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_2/Screen/XemlaiDapAn.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'BatDauChoi.dart';
@@ -217,78 +218,129 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                           Padding(
                             padding: EdgeInsets.only(right: 10),
                             child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: HexColor('FFEE52'),
-                                minimumSize: Size(70, 60),
-                                side: const BorderSide(
-                                    width: 2, color: Colors.black),
-                              ),
-                              child: Padding(
-                                  padding: EdgeInsets.all(0),
-                                  child: Row(
-                                    children: [
-                                      const Padding(
-                                        padding: EdgeInsets.all(2),
-                                        child: Text(
-                                          'Chơi lại',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 22,
-                                            fontFamily: 'FSAriston',
-                                            color: Colors.black,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: HexColor('FFEE52'),
+                                  minimumSize: Size(70, 60),
+                                  side: const BorderSide(
+                                      width: 2, color: Colors.black),
+                                ),
+                                child: Padding(
+                                    padding: EdgeInsets.all(0),
+                                    child: Row(
+                                      children: [
+                                        const Padding(
+                                          padding: EdgeInsets.all(2),
+                                          child: Text(
+                                            'Chơi lại',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontSize: 22,
+                                              fontFamily: 'FSAriston',
+                                              color: Colors.black,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      Image.asset(
-                                        'assets/arrow.png',
-                                        height: 25,
-                                        width: 25,
-                                      ),
-                                    ],
-                                  )),
-                              onPressed: () => showDialog<String>(
-                                      context: context,
-                                      builder: (BuildContext context) =>
-                                          AlertDialog(
-                                            backgroundColor: HexColor('FFFDA2'),
-                                            title:
-                                                 Text('Lưu ý', style: TextStyle(
-                                                  color: HexColor('0C205B'),
-                                                  fontSize: 25,
-                                                  fontFamily: 'FSAriston'
-                                                ),),
-                                            content: const Text(
-                                                'Khi bạn chơi lại hệ thống sẽ không tính điểm hoặc thưởng'),
-                                            actions: <Widget>[
-                                              Stack(
-                                                children: [
-                                                  Row( mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      TextButton(
-                                                        style: TextButton.styleFrom(
-                                                          backgroundColor: HexColor('0C205B'),
-                                                          shadowColor: Colors.white
+                                        Image.asset(
+                                          'assets/arrow.png',
+                                          height: 25,
+                                          width: 25,
+                                        ),
+                                      ],
+                                    )),
+                                onPressed: () => showDialog<String>(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        AlertDialog(
+                                          backgroundColor: HexColor('FFFDA2'),
+                                          title: Text(
+                                            'Lưu ý',
+                                            style: TextStyle(
+                                                color: HexColor('F90716'),
+                                                fontSize: 35,
+                                                fontFamily: 'FSAriston'),
+                                          ),
+                                          content: const Text(
+                                            'Khi bạn chơi lại hệ thống sẽ không tính điểm hoặc thưởng',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                fontFamily: 'FSAriston',
+                                                fontSize: 22),
+                                          ),
+                                          actions: <Widget>[
+                                            Stack(
+                                              children: [
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsets.all(25),
+                                                      child: TextButton(
+                                                        style: TextButton
+                                                            .styleFrom(
+                                                                backgroundColor:
+                                                                    HexColor(
+                                                                        '0C205B'),
+                                                                shadowColor:
+                                                                    Colors
+                                                                        .white),
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                context,
+                                                                'Thoát'),
+                                                        child: Text(
+                                                          'Thoát',
+                                                          style: TextStyle(
+                                                              color: HexColor(
+                                                                  'FFFDA2'),
+                                                              fontSize: 23,
+                                                              fontFamily:
+                                                                  'FSAriston'),
                                                         ),
-                                                onPressed: () => Navigator.pop(
-                                                    context, 'OK'),
-                                                child:  Text('OK', style: TextStyle(
-                                                  color: HexColor('FFFDA2'),
-                                                  fontSize: 20,
-                                                  fontFamily: 'FSAriston'
-                                                ),),
-                                              ),
-
-                                                    ],
-                                                  )
-                                                  
-                                                ],
-
-                                              ),
-                                              
-                                              
-                                            ],
-                                          ))
-                            ),
+                                                      ),
+                                                    ),
+                                                    TextButton(
+                                                      style:
+                                                          TextButton.styleFrom(
+                                                              backgroundColor:
+                                                                  HexColor(
+                                                                      '0C205B'),
+                                                              shadowColor:
+                                                                  Colors.white),
+                                                      onPressed: () {
+                                                        Navigator.of(context).pop();
+                                                        Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                              builder: (context) =>
+                                                                  const BatDauChoi()),
+                                                        );
+                                                      },
+                                                      child: Text(
+                                                        'Đồng ý',
+                                                        style: TextStyle(
+                                                            color: HexColor(
+                                                                'FFFDA2'),
+                                                            fontSize: 23,
+                                                            fontFamily:
+                                                                'FSAriston'),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                Positioned(
+                                                  child: Image.asset(
+                                                      'assets/monster-1.png'),
+                                                  height: 55,
+                                                  width: 55,
+                                                  left: 40,
+                                                  bottom: 29,
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ))),
                           ),
                           Padding(
                               padding: EdgeInsets.only(right: 10),
@@ -322,7 +374,14 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                           ),
                                         ],
                                       )),
-                                  onPressed: () {})),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const XemlaiDapAn()),
+                                    );
+                                  })),
                           Padding(
                             padding: EdgeInsets.zero,
                             child: ElevatedButton(

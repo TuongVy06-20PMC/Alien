@@ -65,7 +65,9 @@ flutter:
   assets:
     - assets/bg.png
     - assets/bg-1.png
+    - assets/bg-2.png
     - assets/logo.png
+    - assets/job-search.png
     - assets/fast-forward.png
     - assets/monster.png
     - assets/user.png
@@ -81,7 +83,14 @@ flutter:
     - assets/menu.png
     - assets/x2.png
     - assets/boqua.png
-
+    - assets/party-popper.png
+    - assets/product-lauch.png
+    - assets/eye-open.png
+    - assets/arrow.png
+    - assets/right-arrow.png
+    - assets/monster-1.png
+    - assets/clear.png
+    - assets/fast-forward.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -94,7 +103,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: FS
+    - family: FSAriston
       fonts:
         - asset: fonts/FS-Ariston.ttf
   #       - asset: fonts/Schyler-Italic.ttf

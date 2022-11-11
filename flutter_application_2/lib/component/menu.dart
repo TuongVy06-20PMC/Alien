@@ -18,7 +18,7 @@ class _MenuState extends State<Menu> {
             decoration: BoxDecoration(
               color: Color.fromRGBO(12, 32, 91, 1),
             ),
-            child: Image(image: AssetImage('assets/logo.png'),),
+            child: Image(image: AssetImage('assets/logo.png'),height: 40,width: 80,fit: BoxFit.cover,),
             ),
         ListTile(
           leading: const Icon(Icons.settings),
