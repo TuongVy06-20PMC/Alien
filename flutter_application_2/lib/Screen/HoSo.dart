@@ -168,6 +168,25 @@ class _HoSoState extends State<HoSo> {
                           ),
                         ),
                       )),
+                  Padding(
+                    padding: EdgeInsets.only(left: 200),
+                    child: TextButton(
+                        child: Text(
+                          'Chỉnh sửa',
+                          style: TextStyle(
+                            color: HexColor('F0CB05'),
+                            fontFamily: 'FSAriston',
+                            fontSize: 20,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ChinhSuaHoSo()),
+                          );
+                        }),
+                  )
                 ],
               ),
             ),
