@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/Screen/ChinhSuaHoSo.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 
@@ -10,55 +11,61 @@ class HoSo extends StatefulWidget {
 }
 
 class _HoSoState extends State<HoSo> {
-   TextEditingController dateinput = TextEditingController(); 
-   void initState() {
-    dateinput.text = ""; 
+  TextEditingController dateinput = TextEditingController();
+  void initState() {
+    dateinput.text = "";
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-       decoration: const BoxDecoration(
-        image: DecorationImage(
-        image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
-      ),
-      child: Row(mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
             Container(
               child: Column(
                 children: [
                   Image.asset(
-                          'assets/logo.png',
-                          fit: BoxFit.cover,
-                          height: 90,
-                          width: 160,),
-                  Image.asset(
-                          'assets/user.png',
-                          height: 60,
-                          fit: BoxFit.cover,
-                        ),
-                  Container(
-                    decoration: BoxDecoration(
-                    color: HexColor('FFEE52'),
-                    borderRadius: BorderRadius.circular(6)),
-                    height: 20,
-                    width: 50,
-                     child: Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 4, 3),
-                    child: Row(
-                      children: [
-                        Text(
-                          'Cấp 1 ',
-                          style: TextStyle(
-                              fontSize: 11, fontWeight: FontWeight.bold,fontFamily: 'FSAriston'),
-                        ),]
-                    )
-                    )
-                    ),
-                  Container(
-                    child: Text('TuongVy2812',style: TextStyle(color: Colors.white,fontFamily: 'FSAriston',fontSize: 20,fontWeight: FontWeight.bold))
+                    'assets/logo.png',
+                    fit: BoxFit.cover,
+                    height: 90,
+                    width: 160,
                   ),
+                  Image.asset(
+                    'assets/user.png',
+                    height: 60,
+                    fit: BoxFit.cover,
+                  ),
+                  Container(
+                      decoration: BoxDecoration(
+                          color: HexColor('FFEE52'),
+                          borderRadius: BorderRadius.circular(6)),
+                      height: 20,
+                      width: 50,
+                      child: Padding(
+                          padding: EdgeInsets.fromLTRB(10, 0, 4, 3),
+                          child: Row(children: [
+                            Text(
+                              'Cấp 1 ',
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'FSAriston'),
+                            ),
+                          ]))),
+                  Container(
+                      child: Text('TuongVy2812',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'FSAriston',
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold))),
                   Padding(
                       padding: EdgeInsets.fromLTRB(0, 15, 0, 5),
                       child: SizedBox(
@@ -85,7 +92,7 @@ class _HoSoState extends State<HoSo> {
                           ),
                         ),
                       )),
-                     Padding(
+                  Padding(
                       padding: EdgeInsets.all(5),
                       child: SizedBox(
                         width: 280,
@@ -100,16 +107,14 @@ class _HoSoState extends State<HoSo> {
                           decoration: InputDecoration(
                             filled: true,
                             fillColor: Colors.white,
-                            
                             enabledBorder: OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.black, width: 2)),
                             border: OutlineInputBorder(),
                             hintText: "Ngày sinh",
-                            suffixIcon:
-                            Padding(
-                            padding: EdgeInsets.all(5),
-                            child: Icon(Icons.calendar_month),
+                            suffixIcon: Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Icon(Icons.calendar_month),
                             ),
                             hintStyle: TextStyle(
                                 color: Colors.grey,
@@ -117,26 +122,27 @@ class _HoSoState extends State<HoSo> {
                                 fontSize: 23),
                           ),
                           readOnly: true,
-                              onTap: () async {
-                          DateTime? pickedDate = await showDatePicker(
-                              context: context, initialDate: DateTime.now(),
-                              firstDate: DateTime(1900), 
-                              lastDate: DateTime(2100)
-                          );   
-                          if(pickedDate != null ){
-                              print(pickedDate);  
-                              String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate); 
-                              print(formattedDate); 
+                          onTap: () async {
+                            DateTime? pickedDate = await showDatePicker(
+                                context: context,
+                                initialDate: DateTime.now(),
+                                firstDate: DateTime(1900),
+                                lastDate: DateTime(2100));
+                            if (pickedDate != null) {
+                              print(pickedDate);
+                              String formattedDate =
+                                  DateFormat('dd-MM-yyyy').format(pickedDate);
+                              print(formattedDate);
                               setState(() {
-                              dateinput.text = formattedDate; 
+                                dateinput.text = formattedDate;
                               });
-                          }else{
+                            } else {
                               print("Ngày không được chọn");
-                          }
-                        },
+                            }
+                          },
                         ),
                       )),
-                      Padding(
+                  Padding(
                       padding: EdgeInsets.all(5),
                       child: SizedBox(
                         width: 280,
@@ -162,26 +168,30 @@ class _HoSoState extends State<HoSo> {
                           ),
                         ),
                       )),
-                        Padding(padding: EdgeInsets.only(left: 200),
-                        child:TextButton(
-                          child: Text(
-                            'Chỉnh sửa',
-                            style: TextStyle(
-                                color: HexColor('F0CB05'),
-                                fontFamily: 'FSAriston',
-                                fontSize: 20,
-                                ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 200),
+                    child: TextButton(
+                        child: Text(
+                          'Chỉnh sửa',
+                          style: TextStyle(
+                            color: HexColor('F0CB05'),
+                            fontFamily: 'FSAriston',
+                            fontSize: 20,
                           ),
-                          onPressed: null
                         ),
-                        )
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ChinhSuaHoSo()),
+                          );
+                        }),
+                  )
                 ],
               ),
             ),
-            
-        ],
-      ),
-        
+          ],
+        ),
       ),
     );
   }
