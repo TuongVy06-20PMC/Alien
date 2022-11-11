@@ -1,3 +1,5 @@
+import 'package:flutter_application_2/Screen/DangKy.dart';
+import 'package:flutter_application_2/Screen/QuenMatKhau.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'Screen1.dart';
@@ -118,7 +120,13 @@ class _DangNhapState extends State<DangNhap> {
                       fontSize: 20,
                       fontStyle: FontStyle.normal),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const QuenMatKhau()),
+                            );
+                },
               ),
             ),
             Padding(
@@ -172,8 +180,11 @@ class _DangNhapState extends State<DangNhap> {
                           fontStyle: FontStyle.italic),
                     ),
                     onPressed: () {
-                      
-              
+                      Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DangKy()),
+                            );
                     },
                   ),
                 ],

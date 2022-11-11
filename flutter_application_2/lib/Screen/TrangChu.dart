@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
+import '../component/menu.dart';
 
 class TrangChu extends StatefulWidget {
   const TrangChu({super.key});
@@ -11,12 +12,15 @@ class TrangChu extends StatefulWidget {
 }
 
 class _TrangChuState extends State<TrangChu> {
+  GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
         initialIndex: 1,
         length: 3,
         child: Scaffold(
+          key: _sKey,
+          endDrawer: Menu(),
           body: TabBarView(
             children: <Widget>[
               Center(
@@ -54,7 +58,7 @@ class _TrangChuState extends State<TrangChu> {
                                 child: Stack(
                                   children: [
                                     IconButton(
-                                        onPressed: (() {}),
+                                        onPressed: ()=>_sKey.currentState?.openEndDrawer(),
                                         icon: Image.asset(
                                           'assets/menu.png',
                                           height: 30,
