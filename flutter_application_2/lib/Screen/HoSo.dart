@@ -66,6 +66,32 @@ class _HoSoState extends State<HoSo> {
                               fontFamily: 'FSAriston',
                               fontSize: 20,
                               fontWeight: FontWeight.bold))),
+                  Padding(
+                      padding: EdgeInsets.fromLTRB(0, 15, 0, 5),
+                      child: SizedBox(
+                        width: 280,
+                        height: 50,
+                        child: TextField(
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'FSAriston',
+                            fontSize: 23,
+                          ),
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            enabledBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.black, width: 2)),
+                            border: OutlineInputBorder(),
+                            hintText: "Họ tên",
+                            hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'FSAriston',
+                                fontSize: 23),
+                          ),
+                        ),
+                      )),
                 ],
               ),
             ),
