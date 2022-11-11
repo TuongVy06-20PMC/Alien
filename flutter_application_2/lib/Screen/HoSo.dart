@@ -142,6 +142,32 @@ class _HoSoState extends State<HoSo> {
                           },
                         ),
                       )),
+                  Padding(
+                      padding: EdgeInsets.all(5),
+                      child: SizedBox(
+                        width: 280,
+                        height: 50,
+                        child: TextField(
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'FSAriston',
+                            fontSize: 23,
+                          ),
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            enabledBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.black, width: 2)),
+                            border: OutlineInputBorder(),
+                            hintText: "Email",
+                            hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'FSAriston',
+                                fontSize: 23),
+                          ),
+                        ),
+                      )),
                 ],
               ),
             ),
