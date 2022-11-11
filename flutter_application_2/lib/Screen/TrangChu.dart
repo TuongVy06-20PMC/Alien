@@ -13,7 +13,9 @@ class TrangChu extends StatefulWidget {
 }
 
 class _TrangChuState extends State<TrangChu> {
+
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
+
   GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {

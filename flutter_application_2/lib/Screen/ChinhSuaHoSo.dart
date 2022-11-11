@@ -10,6 +10,7 @@ class ChinhSuaHoSo extends StatefulWidget {
 }
 
 class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
+
   TextEditingController dateinput = TextEditingController();
   void initState() {
     dateinput.text = "";
