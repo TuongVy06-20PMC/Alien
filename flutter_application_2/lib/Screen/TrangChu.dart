@@ -13,10 +13,9 @@ class TrangChu extends StatefulWidget {
 }
 
 class _TrangChuState extends State<TrangChu> {
-
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
-
   GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
+  final PageStorageBucket bucket = PageStorageBucket();
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -26,18 +25,18 @@ class _TrangChuState extends State<TrangChu> {
           key: _sKey,
           endDrawer: Menu(),
           bottomNavigationBar: Container(
-            color: Color.fromRGBO(249, 187, 64, 50),
-            height: 120,
+            color: HexColor('f9bb40'),
+            height: 85,
             child: TabBar(
               labelColor: HexColor('FFEE52'),
-              unselectedLabelColor: Colors.white70,
+              unselectedLabelColor: HexColor('FFEE52'),
               indicatorSize: TabBarIndicatorSize.tab,
-              indicatorPadding: EdgeInsets.all(5.0),
-              indicatorColor: Colors.yellow,
+              indicatorPadding: EdgeInsets.all(3.0),
+              indicatorColor: HexColor('0C205B'),
               indicator: BoxDecoration(
                   gradient: LinearGradient(
                       colors: [HexColor('FFEE52'), Colors.green]),
-                  borderRadius: BorderRadius.circular(70),
+                  borderRadius: BorderRadius.circular(100),
                   color: Colors.redAccent),
               tabs: const <Widget>[
                 Tab(
@@ -71,7 +70,7 @@ class _TrangChuState extends State<TrangChu> {
                 width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+                      image: AssetImage('assets/bg-2.png'), fit: BoxFit.cover),
                 ),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -79,7 +78,7 @@ class _TrangChuState extends State<TrangChu> {
                       Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(130, 20, 0, 0),
+                            padding: EdgeInsets.fromLTRB(130, 15, 0, 0),
                             child: Column(
                               children: [
                                 Image(
@@ -113,6 +112,7 @@ class _TrangChuState extends State<TrangChu> {
                           )
                         ],
                       ),
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -123,7 +123,7 @@ class _TrangChuState extends State<TrangChu> {
                                   children: [
                                     Container(
                                       margin:
-                                          EdgeInsets.only(top: 13, left: 80),
+                                          EdgeInsets.only(left: 80, top: 12),
                                       decoration: BoxDecoration(
                                           color: Colors.white.withOpacity(0.9),
                                           borderRadius:
@@ -131,7 +131,9 @@ class _TrangChuState extends State<TrangChu> {
                                       height: 35,
                                       width: 160,
                                       child: Padding(
-                                        padding: EdgeInsets.only(left: 25),
+                                        padding: EdgeInsets.only(
+                                          left: 25,
+                                        ),
                                         child: Row(children: [
                                           IconButton(
                                               autofocus: false,
@@ -230,7 +232,7 @@ class _TrangChuState extends State<TrangChu> {
                                 ],
                               )),
                           Padding(
-                              padding: EdgeInsets.fromLTRB(150, 0, 0, 0),
+                              padding: EdgeInsets.fromLTRB(140, 15, 0, 0),
                               child: Column(
                                 children: [
                                   IconButton(
@@ -270,7 +272,7 @@ class _TrangChuState extends State<TrangChu> {
                                 ],
                               )),
                           Padding(
-                              padding: EdgeInsets.fromLTRB(150, 10, 0, 0),
+                              padding: EdgeInsets.fromLTRB(140, 10, 0, 0),
                               child: Column(
                                 children: [
                                   IconButton(
@@ -294,12 +296,17 @@ class _TrangChuState extends State<TrangChu> {
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: HexColor('FFEE52'),
-                            minimumSize: Size(280, 25),
+                            minimumSize: Size(300, 25),
                             side:
                                 const BorderSide(width: 2, color: Colors.black),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            elevation: 8,
+                            shadowColor: Colors.amber.withOpacity(0.5)
                           ),
                           child: const Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: EdgeInsets.all(15),
                             child: Text(
                               'Bắt đầu chơi',
                               textAlign: TextAlign.center,

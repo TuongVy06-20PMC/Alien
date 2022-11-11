@@ -66,24 +66,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
 
-    - assets/bg.png
-    - assets/bg-1.png
-    - assets/logo.png
-    - assets/fast-forward.png
-    - assets/monster.png
-    - assets/user.png
-    - assets/analysis.png
-    - assets/job-search.png
-    - assets/kung-fu.png
-    - assets/players.png
-    - assets/ranking(1).png
-    - assets/money.png
-    - assets/h1.png
-    - assets/50.png
-    - assets/delete.png
-    - assets/menu.png
-    - assets/x2.png
-    - assets/boqua.png
+    - assets/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -98,7 +81,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: FS
+    - family: FSAriston
       fonts:
         - asset: fonts/FS-Ariston.ttf
   #       - asset: fonts/Schyler-Italic.ttf

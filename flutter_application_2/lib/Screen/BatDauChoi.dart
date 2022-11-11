@@ -1,5 +1,6 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class BatDauChoi extends StatefulWidget {
 }
 
 class _BatDauChoiState extends State<BatDauChoi> {
+  Color? color = Colors.white;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,11 +27,11 @@ class _BatDauChoiState extends State<BatDauChoi> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.only(left: 15, right: 15, top: 20),
                 height: MediaQuery.of(context).size.height / 3.5,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.5),
+                    color: Colors.white.withOpacity(0.3),
                     /*border: Border.all(
                     width: 2,
                     color: Colors.white.withOpacity(0.5)
@@ -62,15 +64,37 @@ class _BatDauChoiState extends State<BatDauChoi> {
                         ],
                       ),
                       Container(
-                          //padding: EdgeInsets.only(bottom: 10),
-                          width: MediaQuery.of(context).size.width / 1.3,
-                          child: const Text(
-                            'Tàu Apollo số bao nhiêu được phóng vào ngày 31/1/1971?',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: 'FS',
-                                fontSize: 25,
-                                color: Colors.white),
+                          padding: EdgeInsets.only(bottom: 20),
+                          width: MediaQuery.of(context).size.width / 1.2,
+                          child: Column(
+                            children: const [
+                              SizedBox(
+                                width: double.infinity,
+                                child: Text(
+                                  'Câu 1/10',
+                                  style: TextStyle(
+                                      fontFamily: 'FSAriston',
+                                      fontSize: 25,
+                                      color: Colors.white),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.white,
+                                height: 2.0,
+                                thickness: 2,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                'Tàu Apollo số bao nhiêu được phóng vào ngày 31/1/1971?',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    color: Colors.white),
+                              )
+                            ],
                           )),
                     ]),
               ),
@@ -115,7 +139,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                         const Text(
                                           '00:00',
                                           style: TextStyle(
-                                              //fontFamily: 'FS',
+                                              //fontFamily: 'FSAriston',
                                               fontSize: 25),
                                         )
                                       ],
@@ -132,7 +156,8 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                         const Text(
                                           'Số xu',
                                           style: TextStyle(
-                                              fontFamily: 'FS', fontSize: 30),
+                                              fontFamily: 'FSAriston',
+                                              fontSize: 30),
                                         )
                                       ],
                                     )),
@@ -154,7 +179,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 25,
-                                  fontFamily: 'FS',
+                                  fontFamily: 'FSAriston',
                                   color: Colors.black,
                                 ),
                               ),
@@ -178,7 +203,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 25,
-                                  fontFamily: 'FS',
+                                  fontFamily: 'FSAriston',
                                   color: Colors.black,
                                 ),
                               ),
@@ -202,7 +227,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 25,
-                                  fontFamily: 'FS',
+                                  fontFamily: 'FSAriston',
                                   color: Colors.black,
                                 ),
                               ),
@@ -226,7 +251,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 25,
-                                  fontFamily: 'FS',
+                                  fontFamily: 'FSAriston',
                                   color: Colors.black,
                                 ),
                               ),
@@ -237,8 +262,24 @@ class _BatDauChoiState extends State<BatDauChoi> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
+                            /* Padding(padding: EdgeInsets.only(right: 130),
+                            child: Column( mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text('Sai rồi!!!!', style: TextStyle(
+                                  fontFamily: 'FSAriston',
+                                  fontSize: 25
+                                ),),
+                                Text('+ 0 xu', style: TextStyle(
+                                  color: Colors.red,
+                                  fontFamily: 'FSAriston',
+                                  fontSize: 30
+                                ),)
+                              ],
+
+                            ),
+                            ),*/
                             Padding(
-                              padding: EdgeInsets.only(right: 22,top: 20),
+                              padding: EdgeInsets.only(right: 22, top: 20),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: HexColor('F2FA5A'),
@@ -253,12 +294,19 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontSize: 25,
-                                      fontFamily: 'FS',
+                                      fontFamily: 'FSAriston',
                                       color: Colors.black,
                                     ),
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const KetThucLuotChoi()),
+                                  );
+                                },
                               ),
                             ),
                           ],
@@ -291,7 +339,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
                                                 fontSize: 25,
-                                                fontFamily: 'FS',
+                                                fontFamily: 'FSAriston',
                                                 color: Colors.white,
                                               ),
                                             ),
@@ -305,12 +353,13 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: HexColor('F037A5'),
-                                     minimumSize: Size(80, 80),
+                                      minimumSize: Size(80, 80),
                                       /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
                                     ),
                                     child: Padding(
-                                        padding: EdgeInsets.only(left: 2,right: 2),
+                                        padding:
+                                            EdgeInsets.only(left: 2, right: 2),
                                         child: Column(
                                           children: [
                                             Image.asset(
@@ -323,7 +372,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
                                                 fontSize: 25,
-                                                fontFamily: 'FS',
+                                                fontFamily: 'FSAriston',
                                                 color: Colors.white,
                                               ),
                                             ),
@@ -332,7 +381,6 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                     onPressed: () {},
                                   ),
                                 ),
-                                
                                 Padding(
                                   padding: EdgeInsets.only(right: 0),
                                   child: ElevatedButton(
@@ -342,8 +390,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                       /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
                                     ),
-                                    child: 
-                                    Padding(
+                                    child: Padding(
                                         padding: EdgeInsets.all(0),
                                         child: Column(
                                           children: [
@@ -357,7 +404,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
                                                 fontSize: 25,
-                                                fontFamily: 'FS',
+                                                fontFamily: 'FSAriston',
                                                 color: Colors.white,
                                               ),
                                             ),

@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 30,
-                  fontFamily: 'FS',
+                  fontFamily: 'FSAriston',
                   color: Colors.black,
                 ),
               ),
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.popUntil(context, (route) => route.isFirst);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const TrangChu()),
+                  MaterialPageRoute(builder: (context) => const Screen1()),
                 );
               },
             ),

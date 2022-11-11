@@ -112,7 +112,7 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                             topLeft: Radius.circular(30),
                             topRight: Radius.circular(30))),
                     child: Column(
-                         mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
                           padding:
@@ -227,9 +227,7 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                                 ),
                               ),
                             ),
-                            onPressed: () {
-                              
-                            },
+                            onPressed: () {},
                           ),
                         ),
                         Padding(
@@ -276,36 +274,22 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                             ),
                             ),*/
                             Padding(
-                              padding: EdgeInsets.only(right: 22, top: 20),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: HexColor('F2FA5A'),
-                                  minimumSize: Size(80, 10),
-                                  side: const BorderSide(
-                                      width: 2, color: Colors.black),
-                                ),
-                                child: const Padding(
-                                  padding: EdgeInsets.all(3),
-                                  child: Text(
-                                    'Tiếp theo >>',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      fontFamily: 'FSAriston',
-                                      color: Colors.black,
-                                    ),
+                                padding: EdgeInsets.only(right: 22, top: 20),
+                                child: IconButton(
+                                  icon: Image.asset(
+                                    'assets/fast-forward.png',
+                                    height: 100,
+                                    width: 100,
                                   ),
-                                ),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const KetThucLuotChoi()),
-                                  );
-                                },
-                              ),
-                            ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const KetThucLuotChoi()),
+                                    );
+                                  },
+                                ))
                           ],
                         ),
                       ],
