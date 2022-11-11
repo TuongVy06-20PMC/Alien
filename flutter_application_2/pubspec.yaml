@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   hexcolor: ^3.0.1
   intl: ^0.17.0
+  audioplayers: ^1.1.1
+  flutter_screen_wake: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -86,6 +88,7 @@ flutter:
     - assets/eye-open.png
     - assets/arrow.png
     - assets/right-arrow.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
