@@ -92,6 +92,56 @@ class _HoSoState extends State<HoSo> {
                           ),
                         ),
                       )),
+                  Padding(
+                      padding: EdgeInsets.all(5),
+                      child: SizedBox(
+                        width: 280,
+                        height: 50,
+                        child: TextField(
+                          controller: dateinput,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'FSAriston',
+                            fontSize: 23,
+                          ),
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            enabledBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.black, width: 2)),
+                            border: OutlineInputBorder(),
+                            hintText: "Ngày sinh",
+                            suffixIcon: Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Icon(Icons.calendar_month),
+                            ),
+                            hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'FSAriston',
+                                fontSize: 23),
+                          ),
+                          readOnly: true,
+                          onTap: () async {
+                            DateTime? pickedDate = await showDatePicker(
+                                context: context,
+                                initialDate: DateTime.now(),
+                                firstDate: DateTime(1900),
+                                lastDate: DateTime(2100));
+                            if (pickedDate != null) {
+                              print(pickedDate);
+                              String formattedDate =
+                                  DateFormat('dd-MM-yyyy').format(pickedDate);
+                              print(formattedDate);
+                              setState(() {
+                                dateinput.text = formattedDate;
+                              });
+                            } else {
+                              print("Ngày không được chọn");
+                            }
+                          },
+                        ),
+                      )),
                 ],
               ),
             ),
