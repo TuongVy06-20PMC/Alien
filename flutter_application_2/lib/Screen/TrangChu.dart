@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
+import 'package:flutter_application_2/Screen/GiaoDau.dart';
 import 'package:flutter_application_2/Screen/HoSo.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
@@ -111,7 +112,6 @@ class _TrangChuState extends State<TrangChu> {
                           )
                         ],
                       ),
-
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -217,7 +217,15 @@ class _TrangChuState extends State<TrangChu> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.popUntil(
+                                          context, (route) => route.isFirst);
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const GiaoDau()));
+                                    },
                                     icon: Image.asset('assets/players.png'),
                                     iconSize: 50,
                                   ),
@@ -294,16 +302,15 @@ class _TrangChuState extends State<TrangChu> {
                         padding: EdgeInsets.only(top: 150),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: HexColor('FFEE52'),
-                            minimumSize: Size(300, 25),
-                            side:
-                                const BorderSide(width: 2, color: Colors.black),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            elevation: 8,
-                            shadowColor: Colors.amber.withOpacity(0.5)
-                          ),
+                              backgroundColor: HexColor('FFEE52'),
+                              minimumSize: Size(300, 25),
+                              side: const BorderSide(
+                                  width: 2, color: Colors.black),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              elevation: 8,
+                              shadowColor: Colors.amber.withOpacity(0.5)),
                           child: const Padding(
                             padding: EdgeInsets.all(15),
                             child: Text(
