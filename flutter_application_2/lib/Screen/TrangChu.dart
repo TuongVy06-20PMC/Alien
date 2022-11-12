@@ -3,6 +3,7 @@ import 'package:flutter_application_2/Screen/BatDauChoi.dart';
 import 'package:flutter_application_2/Screen/GiaoDau.dart';
 import 'package:flutter_application_2/Screen/HoSo.dart';
 import 'package:flutter_application_2/Screen/ThongKe.dart';
+import 'package:flutter_application_2/Screen/XepHang.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 import '../component/menu.dart';
@@ -251,7 +252,7 @@ class _TrangChuState extends State<TrangChu> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const ThongKe()),
+                                                const XepHang()),
                                       );
                                     },
                                     icon: Image.asset('assets/ranking(1).png'),
@@ -293,7 +294,16 @@ class _TrangChuState extends State<TrangChu> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.popUntil(
+                                          context, (route) => route.isFirst);
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const ThongKe()),
+                                      );
+                                    },
                                     icon: Image.asset('assets/analysis.png'),
                                     iconSize: 50,
                                   ),
