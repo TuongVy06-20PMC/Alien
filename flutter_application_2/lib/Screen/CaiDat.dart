@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:flutter_screen_wake/flutter_screen_wake.dart';
 import 'dart:async';
 import 'package:hexcolor/hexcolor.dart';
+import '../component/menu.dart';
 
 class CaiDat extends StatefulWidget {
   const CaiDat({super.key});
@@ -13,6 +15,7 @@ class CaiDat extends StatefulWidget {
 }
 
 class _CaiDatState extends State<CaiDat> {
+  GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   double brightness =0.0;
   bool toggle=false;
 
@@ -64,26 +67,58 @@ Future<void>initPlatformBrightness()async{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
-        child:Container(
-           width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-             decoration: const BoxDecoration(
-        image: DecorationImage(
-        image: AssetImage('assets/caidat.png'), fit: BoxFit.cover),
-      ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-                      child: Row(mainAxisAlignment: MainAxisAlignment.start,
+       key: _sKey,
+      body: Center(
+          child: Container(
+              decoration: const BoxDecoration(
+              image: DecorationImage(
+              image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+              ),
+              child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Column(
+              children: <Widget>[
+                Image.asset(
+                          'assets/logo.png',
+                          fit: BoxFit.cover,
+                          height: 90,
+                          width: 160,),
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                    onPressed: (() {
+                      Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TrangChu()),
+                );
+                    }),
+                    icon: Image.asset(
+                      'assets/delete.png',
+                      height: 25,
+                      width: 25,
+                      color: HexColor('FFF323'),
+                    )),
+                
+                    ]),
+                SizedBox(height: 80,),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      width: 150,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.green,
+                      ), 
+                      child: Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Âm thanh       ',style: TextStyle(color: Colors.yellow,fontSize: 20,fontWeight: FontWeight.bold),),
-                          CircleAvatar(
+                          Text('Âm thanh',style: TextStyle(color: Colors.yellow,fontSize: 20,fontWeight: FontWeight.bold),),
+                          InkWell(
                             radius: 25,
                             child: IconButton(
                             icon: Icon(
-                             isPlaying ? Icons.pause : Icons.play_arrow,
+                             isPlaying ? Icons.music_note : Icons.music_off,
+                             size: 30,
                             ),
                                onPressed: (){
                                if(isPlaying)
@@ -98,8 +133,33 @@ Future<void>initPlatformBrightness()async{
                 ),
                         ]
                         ),
-                    ),
-            Row(
+                    ), 
+                    SizedBox(
+                      width: 5,
+                    ), 
+                    Container(
+                        width: 150,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blue,
+                        ),
+                        child: TextButton(
+                          child: Text('Ghi cái gì giờ ???',style: TextStyle(fontSize: 20),),
+                          onPressed: null,
+                          )
+                        ) 
+                  ], 
+                  mainAxisAlignment: MainAxisAlignment.center,
+                ),
+                SizedBox(height: 5,),
+                Container(
+                  width: 305,
+                  height: 100,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.yellow),
+                  child: Row(
               children: [
                 AnimatedCrossFade(
               firstChild: Icon(Icons.brightness_7,size: 40,), 
@@ -126,11 +186,12 @@ Future<void>initPlatformBrightness()async{
               ),
               ],
             ),
-            Text('Độ sáng',style: TextStyle(color: Colors.yellow),)
-          ],
-        ),
-        )
+                ), 
+                ]
+                )
+                )
       )
-    );
+      )
+      );
   }
 }
