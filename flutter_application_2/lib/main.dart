@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
 import 'package:flutter_application_2/Screen/GiaoDau.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
+import 'package:flutter_application_2/Screen/XepHang.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'Screen/Screen1.dart';
 
@@ -62,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.popUntil(context, (route) => route.isFirst);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const GiaoDau()),
+                  MaterialPageRoute(builder: (context) => const XepHang()),
                 );
               },
             ),
