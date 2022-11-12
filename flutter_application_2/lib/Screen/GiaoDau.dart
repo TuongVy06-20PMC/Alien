@@ -25,7 +25,7 @@ class _GiaoDauState extends State<GiaoDau> {
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/bg2.png'), fit: BoxFit.cover),
         ),
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           Row(
