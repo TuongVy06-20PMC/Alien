@@ -3,6 +3,7 @@ import 'package:flutter_application_2/Screen/BatDauChoi.dart';
 import 'package:flutter_application_2/Screen/GiaoDau.dart';
 import 'package:flutter_application_2/Screen/HoSo.dart';
 import 'package:flutter_application_2/Screen/ThongKe.dart';
+import 'package:flutter_application_2/Screen/TimKiem.dart';
 import 'package:flutter_application_2/Screen/XepHang.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
@@ -276,7 +277,16 @@ class _TrangChuState extends State<TrangChu> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.popUntil(
+                                          context, (route) => route.isFirst);
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const TimKiem()),
+                                      );
+                                    },
                                     icon: Image.asset('assets/job-search.png'),
                                     iconSize: 50,
                                   ),
