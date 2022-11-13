@@ -1,6 +1,7 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
+import 'package:flutter_application_2/Screen/TrangChuTabBarGoogle.dart';
 import 'package:flutter_application_2/Screen/XemlaiDapAn.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
@@ -310,7 +311,8 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                               shadowColor:
                                                                   Colors.white),
                                                       onPressed: () {
-                                                        Navigator.of(context).pop();
+                                                        Navigator.of(context)
+                                                            .pop();
                                                         Navigator.push(
                                                           context,
                                                           MaterialPageRoute(
@@ -417,11 +419,11 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                   )),
                               onPressed: () {
                                 Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const TrangChu()),
-                                    );
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TrangChuTabBarGoogle()),
+                                );
                               },
                             ),
                           ),
