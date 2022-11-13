@@ -3,6 +3,7 @@ import 'package:flutter_application_2/Screen/BatDauChoi.dart';
 import 'package:flutter_application_2/Screen/GiaoDau.dart';
 import 'package:flutter_application_2/Screen/HoSo.dart';
 import 'package:flutter_application_2/Screen/ThongKe.dart';
+import 'package:flutter_application_2/Screen/TrangChuTabBarGoogle.dart';
 import 'package:flutter_application_2/Screen/XepHang.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -54,7 +55,7 @@ class _TimKiemState extends State<TimKiem> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const TrangChu()));
+                                                  const TrangChuTabBarGoogle()));
                                     },
                                     icon: Image.asset('assets/delete.png'))
                               ],
