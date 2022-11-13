@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
 import 'package:flutter_application_2/Screen/HoSo.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
+import 'package:flutter_application_2/Screen/TrangChuTabBarGoogle.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 import '../component/menu.dart';
@@ -40,7 +41,8 @@ class _GiaoDauState extends State<GiaoDau> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const TrangChu()));
+                                  builder: (context) =>
+                                      const TrangChuTabBarGoogle()));
                         },
                         icon: Image.asset('assets/delete.png'))
                   ],
