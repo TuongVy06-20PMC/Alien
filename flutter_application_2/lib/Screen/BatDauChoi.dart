@@ -2,6 +2,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
+import 'package:flutter_application_2/Screen/TrangChuTabBarGoogle.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'TrangChu.dart';
@@ -49,12 +50,12 @@ class _BatDauChoiState extends State<BatDauChoi> {
                         children: [
                           IconButton(
                               onPressed: (() {
-                                 Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const TrangChu()),
-                                  );
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TrangChuTabBarGoogle()),
+                                );
                               }),
                               icon: Image.asset(
                                 'assets/delete.png',
@@ -63,7 +64,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                 color: HexColor('FFF323'),
                               )),
                           IconButton(
-                              onPressed: (){},
+                              onPressed: () {},
                               icon: Image.asset(
                                 'assets/menu.png',
                                 height: 30,
