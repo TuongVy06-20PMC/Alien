@@ -77,7 +77,7 @@ class _TimKiemState extends State<TimKiem> {
                         padding: const EdgeInsets.only(
                             top: 50.0, left: 8.0, right: 8.0, bottom: 8.0),
                         child: Container(
-                          height: 600.0,
+                          height: 520.0,
                           decoration: BoxDecoration(
                             color: Colors.white.withOpacity(.6),
                             borderRadius: const BorderRadius.all(
