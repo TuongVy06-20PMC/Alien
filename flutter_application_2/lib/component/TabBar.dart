@@ -8,7 +8,7 @@ import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:flutter_application_2/Screen/XepHang.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
-import '../component/menu.dart';
+import 'menu.dart';
 
 class TabBarOld extends StatefulWidget {
   const TabBarOld({super.key});

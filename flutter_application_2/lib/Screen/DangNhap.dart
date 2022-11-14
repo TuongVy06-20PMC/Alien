@@ -1,7 +1,7 @@
 import 'package:flutter_application_2/Screen/DangKy.dart';
 import 'package:flutter_application_2/Screen/QuenMatKhau.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
-import 'package:flutter_application_2/Screen/TrangChuTabBarGoogle.dart';
+import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'Screen1.dart';
