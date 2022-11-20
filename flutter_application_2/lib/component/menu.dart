@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../Screen/DangNhap.dart';
+import '../Screen/CaiDat.dart';
 class Menu extends StatefulWidget {
 const Menu({Key? key}):super(key: key); 
   @override
@@ -25,7 +26,7 @@ class _MenuState extends State<Menu> {
           title: const Text('Cài đặt'),
           onTap: (){
             Navigator.of(context).popUntil((route) => route.isFirst);
-            //Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingScreen()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>CaiDat()));
           },
         ),
         ListTile(

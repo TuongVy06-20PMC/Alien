@@ -22,7 +22,7 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/bg2.png'), fit: BoxFit.cover),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

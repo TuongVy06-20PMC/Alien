@@ -316,7 +316,7 @@ class _DangKyState extends State<DangKy> {
                           child: Text(
                             'Đăng nhập ngay',
                             style: TextStyle(
-                                color: HexColor('F0CB05'),
+                                color: HexColor('F2FA5A'),
                                 fontFamily: 'FSAriston',
                                 fontSize: 20,
                                 fontStyle: FontStyle.italic),

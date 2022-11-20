@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
+import 'package:flutter_application_2/Screen/GiaoDau.dart';
+import 'package:flutter_application_2/Screen/ThongKe.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
+import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
+import 'package:flutter_application_2/Screen/XepHang.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'Screen/Screen1.dart';
 
@@ -21,6 +25,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//123
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -51,7 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Bắt đầu.......',
                 textAlign: TextAlign.center,
                 style: TextStyle(
+<<<<<<< HEAD
                   fontSize: 30,
+=======
+                  fontSize: 35,
+>>>>>>> aa3ef946d295f69f0e9321c2d6d2e91a36043fe1
                   fontFamily: 'FSAriston',
                   color: Colors.black,
                 ),
@@ -60,7 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.popUntil(context, (route) => route.isFirst);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const TrangChu()),
+                  MaterialPageRoute(
+                      builder: (context) => const TrangChuTabBarGoogle()),
                 );
               },
             ),

@@ -23,13 +23,15 @@ class _HoSoState extends State<HoSo> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/bg2.png'), fit: BoxFit.cover),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
+              margin: EdgeInsets.only(top: 30),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Image.asset(
                     'assets/logo.png',
@@ -53,6 +55,7 @@ class _HoSoState extends State<HoSo> {
                           child: Row(children: [
                             Text(
                               'Cấp 1 ',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.bold,
@@ -195,4 +198,4 @@ class _HoSoState extends State<HoSo> {
       ),
     );
   }
-}
+}//thay doi
