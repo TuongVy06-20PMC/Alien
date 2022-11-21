@@ -271,7 +271,7 @@ class _TrangChuState extends State<TrangChu> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: 150),
+            padding: EdgeInsets.only(top: 100),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                   backgroundColor: HexColor('FFEE52'),
