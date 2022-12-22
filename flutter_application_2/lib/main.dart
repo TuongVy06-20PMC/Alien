@@ -56,7 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Bắt đầu.......',
                 textAlign: TextAlign.center,
                 style: TextStyle(
+<<<<<<< HEAD
+                  fontSize: 30,
+=======
                   fontSize: 35,
+>>>>>>> aa3ef946d295f69f0e9321c2d6d2e91a36043fe1
                   fontFamily: 'FSAriston',
                   color: Colors.black,
                 ),

@@ -1,8 +1,11 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
+<<<<<<< HEAD
+=======
 import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
+>>>>>>> aa3ef946d295f69f0e9321c2d6d2e91a36043fe1
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'TrangChu.dart';
