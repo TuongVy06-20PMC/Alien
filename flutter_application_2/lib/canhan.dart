@@ -786,14 +786,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                 ],
                               ),
                             ),
-                            const Positioned(
-                                left: 20,
-                                bottom: 470,
-                                child: Image(
-                                  image: AssetImage('assets/monster.png'),
-                                  height: 100,
-                                  width: 100,
-                                )),
+                           
                           ],
                         )
                       ],
