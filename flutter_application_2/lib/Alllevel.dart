@@ -1731,7 +1731,19 @@ class _LevelScreenState extends State<LevelScreen> {
                                                     ),
                                                   ]),
                                                 ),
-                                                
+                                                onTap: () {
+                                                  if (this
+                                                      .widget
+                                                      .ObLevel
+                                                      .level10) {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              MyWidget(level: 10,you: this.widget.ObLevel)),
+                                                    );
+                                                  }
+                                                },
                                               ),
                                             ],
                                           ),
