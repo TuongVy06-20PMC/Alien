@@ -259,7 +259,10 @@ class _DangKyState extends State<DangKy> {
                               fontFamily: 'Linotte',
                               fontSize: 18),
                         ),
-                        
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        validator: (value)=>value!=null&&value.length<=5
+                        ?'Nhập trên 5 ký tự'
+                        :null,
                       ),
                     )),
                 InkWell(
