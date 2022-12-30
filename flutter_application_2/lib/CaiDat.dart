@@ -196,7 +196,7 @@ class _CaiDatState extends State<CaiDat> {
                                               player.pause();
                                             } else {
                                               player.play(AssetSource('1.mp3'));
-                                              loop();
+                                              //loop();
                                             }
                                           },
                                         ),
