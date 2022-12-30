@@ -124,7 +124,7 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                     ),
                   ),
                 )),
-            /* SizedBox(height: 10),
+            SizedBox(height: 10),
                   Padding(
                       padding: EdgeInsets.all(5),
                       child: SizedBox(
@@ -174,7 +174,7 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                             }
                           },
                         ),
-                      )), */
+                      )),
             SizedBox(height: 10),
              Padding(
                  padding: EdgeInsets.all(5),
