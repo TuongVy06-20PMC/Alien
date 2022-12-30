@@ -85,51 +85,51 @@ class _HoSoState extends State<HoSo> {
             //giao dau
 
             //xep hang
-            // InkWell(
-            //   child: Container(
-            //     margin:
-            //         EdgeInsets.only(bottom: 15),
-            //     child: Stack(children: [
-            //       Row(
-            //         mainAxisAlignment:
-            //             MainAxisAlignment
-            //                 .center,
-            //         crossAxisAlignment:
-            //             CrossAxisAlignment
-            //                 .center,
-            //         children: [
-            //           Image.asset(
-            //             'assets/btn.png',
-            //             fit: BoxFit.fill,
-            //             height: 55,
-            //             width: 200,
-            //           )
-            //         ],
-            //       ),
-            //       // Positioned(
-            //       //   child: Padding(
-            //       //     padding:
-            //       //         EdgeInsets.all(10),
-            //       //     child: Text(
-            //       //       data['ngaysinh']
-            //       //           .toString(),
-            //       //       textAlign:
-            //       //           TextAlign.center,
-            //       //       style: TextStyle(
-            //       //         fontSize: 9,
-            //       //         fontFamily:
-            //       //             'LinotteBold',
-            //       //         color: Colors.black,
-            //       //       ),
-            //       //     ),
-            //       //   ),
-            //       //   left: 96,
-            //       //   top: 7,
-            //       // ),
-            //     ]),
-            //   ),
-            //   onTap: () {},
-            // ),
+            InkWell(
+              child: Container(
+                margin:
+                    EdgeInsets.only(bottom: 15),
+                child: Stack(children: [
+                  Row(
+                    mainAxisAlignment:
+                        MainAxisAlignment
+                            .center,
+                    crossAxisAlignment:
+                        CrossAxisAlignment
+                            .center,
+                    children: [
+                      Image.asset(
+                        'assets/btn.png',
+                        fit: BoxFit.fill,
+                        height: 55,
+                        width: 200,
+                      )
+                    ],
+                  ),
+                  // Positioned(
+                  //   child: Padding(
+                  //     padding:
+                  //         EdgeInsets.all(10),
+                  //     child: Text(
+                  //       data['ngaysinh']
+                  //           .toString(),
+                  //       textAlign:
+                  //           TextAlign.center,
+                  //       style: TextStyle(
+                  //         fontSize: 9,
+                  //         fontFamily:
+                  //             'LinotteBold',
+                  //         color: Colors.black,
+                  //       ),
+                  //     ),
+                  //   ),
+                  //   left: 96,
+                  //   top: 7,
+                  // ),
+                ]),
+              ),
+              onTap: () {},
+            ),
 
             //thống kê
             InkWell(
