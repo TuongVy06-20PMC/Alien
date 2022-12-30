@@ -117,56 +117,56 @@ class _DangKyState extends State<DangKy> {
                         ),
                       ),
                     )),
-                // Padding(
-                //     padding: EdgeInsets.all(5),
-                //     child: SizedBox(
-                //       width: 280,
-                //       height: 50,
-                //       child: TextField(
-                //         controller: dateinput,
-                //         style: TextStyle(
-                //           color: Colors.black,
-                //           fontFamily: 'Linotte',
-                //           fontSize: 20,
-                //         ),
-                //         decoration: InputDecoration(
-                //           filled: true,
-                //           fillColor: Colors.white,
-                //           enabledBorder: OutlineInputBorder(
-                //               borderSide:
-                //                   BorderSide(color: Colors.black, width: 2)),
-                //           border: OutlineInputBorder(),
-                //           hintText: "Ngày sinh",
-                //           suffixIcon: Padding(
-                //             padding: EdgeInsets.all(5),
-                //             child: Icon(Icons.calendar_month),
-                //           ),
-                //           hintStyle: TextStyle(
-                //               color: Colors.grey,
-                //               fontFamily: 'Linotte',
-                //               fontSize: 18),
-                //         ),
-                //         readOnly: true,
-                //         onTap: () async {
-                //           DateTime? pickedDate = await showDatePicker(
-                //               context: context,
-                //               initialDate: DateTime.now(),
-                //               firstDate: DateTime(1900),
-                //               lastDate: DateTime(2100));
-                //           if (pickedDate != null) {
-                //             print(pickedDate);
-                //             String formattedDate =
-                //                 DateFormat('yyyy-MM-dd').format(pickedDate);
-                //             print(formattedDate);
-                //             setState(() {
-                //               dateinput.text = formattedDate;
-                //             });
-                //           } else {
-                //             print("Ngày không được chọn");
-                //           }
-                //         },
-                //       ),
-                //     )),
+                 Padding(
+                     padding: EdgeInsets.all(5),
+                     child: SizedBox(
+                       width: 280,
+                       height: 50,
+                       child: TextField(
+                         controller: dateinput,
+                         style: TextStyle(
+                           color: Colors.black,
+                           fontFamily: 'Linotte',
+                           fontSize: 20,
+                         ),
+                         decoration: InputDecoration(
+                           filled: true,
+                           fillColor: Colors.white,
+                           enabledBorder: OutlineInputBorder(
+                               borderSide:
+                                   BorderSide(color: Colors.black, width: 2)),
+                           border: OutlineInputBorder(),
+                           hintText: "Ngày sinh",
+                           suffixIcon: Padding(
+                             padding: EdgeInsets.all(5),
+                             child: Icon(Icons.calendar_month),
+                           ),
+                           hintStyle: TextStyle(
+                               color: Colors.grey,
+                               fontFamily: 'Linotte',
+                               fontSize: 18),
+                         ),
+                         readOnly: true,
+                         onTap: () async {
+                           DateTime? pickedDate = await showDatePicker(
+                               context: context,
+                               initialDate: DateTime.now(),
+                               firstDate: DateTime(1900),
+                               lastDate: DateTime(2100));
+                           if (pickedDate != null) {
+                             print(pickedDate);
+                             String formattedDate =
+                                 DateFormat('yyyy-MM-dd').format(pickedDate);
+                             print(formattedDate);
+                             setState(() {
+                               dateinput.text = formattedDate;
+                             });
+                           } else {
+                             print("Ngày không được chọn");
+                           }
+                         },
+                       ),
+                     )),
                 Padding(
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
