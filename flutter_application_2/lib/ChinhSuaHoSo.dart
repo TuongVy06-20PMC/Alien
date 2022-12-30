@@ -77,9 +77,7 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                     )),
               ],
             ),
-            SizedBox(
-              height: 40,
-            ),
+            
             Stack(
               children: <Widget>[
                 CircleAvatar(
@@ -88,9 +86,7 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 10,
-            ),
+            
             Text(
               you.ten,
               style: TextStyle(
@@ -105,7 +101,7 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                   child: TextField(
                     controller: txtTendn,
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Color.fromARGB(255, 219, 9, 9),
                       fontFamily: 'Linotte',
                       fontSize: 20,
                     ),
