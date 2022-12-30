@@ -47,7 +47,10 @@ class LoadingState extends State<Loading> {
                 ),
               ),
               onPressed: () {
-                
+                Navigator.popUntil(context, (route) => route.isFirst);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Screen1()),
                 );
               },
             ),
