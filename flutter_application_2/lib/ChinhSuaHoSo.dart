@@ -176,33 +176,33 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                         ),
                       )), */
             SizedBox(height: 10),
-            // Padding(
-            //     padding: EdgeInsets.all(5),
-            //     child: SizedBox(
-            //       width: 280,
-            //       height: 52,
-            //       child: TextField(
-            //         controller: txtHoten,
-            //         style: TextStyle(
-            //           color: Colors.black,
-            //           fontFamily: 'Linotte',
-            //           fontSize: 20,
-            //         ),
-            //         decoration: InputDecoration(
-            //           filled: true,
-            //           fillColor: Colors.white,
-            //           enabledBorder: OutlineInputBorder(
-            //               borderSide:
-            //                   BorderSide(color: Colors.black, width: 2)),
-            //           border: OutlineInputBorder(),
-            //           hintText: "Họ tên",
-            //           hintStyle: TextStyle(
-            //               color: Colors.grey,
-            //               fontFamily: 'Linotte',
-            //               fontSize: 18),
-            //         ),
-            //       ),
-            //     )),
+             Padding(
+                 padding: EdgeInsets.all(5),
+                 child: SizedBox(
+                   width: 280,
+                   height: 52,
+                   child: TextField(
+                     controller: txtHoten,
+                     style: TextStyle(
+                       color: Colors.black,
+                       fontFamily: 'Linotte',
+                       fontSize: 20,
+                     ),
+                     decoration: InputDecoration(
+                       filled: true,
+                       fillColor: Colors.white,
+                       enabledBorder: OutlineInputBorder(
+                           borderSide:
+                               BorderSide(color: Colors.black, width: 2)),
+                       border: OutlineInputBorder(),
+                       hintText: "Họ tên",
+                       hintStyle: TextStyle(
+                           color: Colors.grey,
+                           fontFamily: 'Linotte',
+                           fontSize: 18),
+                     ),
+                   ),
+                 )),
             SizedBox(height: 10),
             InkWell(
                 child: Container(
