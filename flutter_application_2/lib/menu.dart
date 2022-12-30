@@ -29,7 +29,7 @@ class _MenuState extends State<Menu> {
             child: DrawerHeader(
                 margin: const EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 5, 5, 5),
+                  color: Color.fromRGBO(12, 32, 91, 1),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -44,7 +44,7 @@ class _MenuState extends State<Menu> {
                       style: TextStyle(
                           fontFamily: 'LinotteBold',
                           fontSize: 23,
-                          color: Colors.red),
+                          color: Colors.white),
                     ),
                   ],
                 )),
