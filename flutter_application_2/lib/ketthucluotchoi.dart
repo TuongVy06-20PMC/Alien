@@ -524,7 +524,11 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                                             ),
                                                                           ]),
                                                                     ),
-                                                                    
+                                                                    onTap: () {
+                                                                      Navigator.of(
+                                                                              context)
+                                                                          .pop();
+                                                                    },
                                                                   ),
                                                                 ],
                                                               ),
