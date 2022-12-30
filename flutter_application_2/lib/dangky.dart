@@ -21,7 +21,7 @@ class _DangKyState extends State<DangKy> {
   final txtHoten = TextEditingController();
   final txtTendn = TextEditingController();
   final txtPass = TextEditingController();
-  final txtConfirmPass = TextEditingController();
+  
 
   bool _obscureText = true;
   void _XemMatKhau() {
