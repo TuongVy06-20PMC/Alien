@@ -1747,7 +1747,15 @@ class _LevelScreenState extends State<LevelScreen> {
                                               ),
                                             ],
                                           ),
-                                         
+                                          Positioned(
+                                            child: Image.asset(
+                                              'assets/monster-1.png',
+                                              fit: BoxFit.fill,
+                                              height: 50,
+                                              width: 50,
+                                            ),
+                                            left: 40,
+                                          ),
                                         ],
                                       )
                                     ],
