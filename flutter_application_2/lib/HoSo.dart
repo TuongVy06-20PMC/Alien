@@ -106,26 +106,26 @@ class _HoSoState extends State<HoSo> {
                       )
                     ],
                   ),
-                   Positioned(
-                     child: Padding(
-                       padding:
-                           EdgeInsets.all(10),
-                       child: Text(
-                         data['ngaysinh']
-                             .toString(),
-                         textAlign:
-                             TextAlign.center,
-                         style: TextStyle(
-                           fontSize: 9,
-                           fontFamily:
-                               'LinotteBold',
-                           color: Colors.black,
-                         ),
-                       ),
-                     ),
-                     left: 96,
-                     top: 7,
-                   ),
+                  // Positioned(
+                  //   child: Padding(
+                  //     padding:
+                  //         EdgeInsets.all(10),
+                  //     child: Text(
+                  //       data['ngaysinh']
+                  //           .toString(),
+                  //       textAlign:
+                  //           TextAlign.center,
+                  //       style: TextStyle(
+                  //         fontSize: 9,
+                  //         fontFamily:
+                  //             'LinotteBold',
+                  //         color: Colors.black,
+                  //       ),
+                  //     ),
+                  //   ),
+                  //   left: 96,
+                  //   top: 7,
+                  // ),
                 ]),
               ),
               onTap: () {},
