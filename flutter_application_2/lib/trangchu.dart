@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gamealien/HoSo.dart';
+
 import 'package:gamealien/object/level.dart';
-import 'package:gamealien/xephang.dart';
+
 import 'package:hexcolor/hexcolor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Alllevel.dart';
-import 'ThongKe.dart';
-import 'TimKiem.dart';
+
 import 'menu.dart';
 
 class TrangChu extends StatefulWidget {
@@ -125,8 +124,7 @@ class _TrangChuState extends State<TrangChu> {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HoSo()));
+                     
                     },
                     child: Padding(
                       padding: EdgeInsets.only(left: 50),
@@ -397,10 +395,7 @@ class _TrangChuState extends State<TrangChu> {
                           ]),
                         ),
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => XepHang()),
-                          );
+                         
                         },
                       ),
 
@@ -440,11 +435,7 @@ class _TrangChuState extends State<TrangChu> {
                           ]),
                         ),
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ThongKe()),
-                          );
+                         
                         },
                       ),
 
@@ -484,10 +475,7 @@ class _TrangChuState extends State<TrangChu> {
                           ]),
                         ),
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => TimKiem()),
-                          );
+                         
                         },
                       ),
                     ],
