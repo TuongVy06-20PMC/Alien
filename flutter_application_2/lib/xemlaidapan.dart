@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 
-import 'components/contact_object.dart';
+import 'component/contact_object.dart';
 
 class XemlaiDapAn extends StatefulWidget {
   XemlaiDapAn({super.key, required this.querries});
@@ -255,68 +255,76 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
 
                             ),
                             ),*/
-                            i>0?Padding(
-                              padding: EdgeInsets.only(top: 12, right: 20),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.white,
-                                    minimumSize: Size(50, 20),
-                                    side: BorderSide(
-                                        width: 3, color: HexColor('614400')),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(20))),
-                                child: Padding(
-                                  padding: EdgeInsets.all(10),
-                                  child: Text(
-                                    'Quay Lại >>',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'LinotteBold',
-                                      color: HexColor('000000'),
+                            i > 0
+                                ? Padding(
+                                    padding:
+                                        EdgeInsets.only(top: 12, right: 20),
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.white,
+                                          minimumSize: Size(50, 20),
+                                          side: BorderSide(
+                                              width: 3,
+                                              color: HexColor('614400')),
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20))),
+                                      child: Padding(
+                                        padding: EdgeInsets.all(10),
+                                        child: Text(
+                                          'Quay Lại >>',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontFamily: 'LinotteBold',
+                                            color: HexColor('000000'),
+                                          ),
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        if (i < 10) {
+                                          i--;
+                                          setState(() {});
+                                        }
+                                      },
                                     ),
-                                  ),
-                                ),
-                                onPressed: () {
-                                  if (i < 10) {
-                                    i--;
-                                    setState(() {});
-                                  }
-                                },
-                              ),
-                            ):Container(),
-                            i+1<10?Padding(
-                              padding: EdgeInsets.only(top: 12, right: 20),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.white,
-                                    minimumSize: Size(50, 20),
-                                    side: BorderSide(
-                                        width: 3, color: HexColor('614400')),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(20))),
-                                child: Padding(
-                                  padding: EdgeInsets.all(10),
-                                  child: Text(
-                                    'Tiếp theo >>',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'LinotteBold',
-                                      color: HexColor('000000'),
+                                  )
+                                : Container(),
+                            i + 1 < 10
+                                ? Padding(
+                                    padding:
+                                        EdgeInsets.only(top: 12, right: 20),
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.white,
+                                          minimumSize: Size(50, 20),
+                                          side: BorderSide(
+                                              width: 3,
+                                              color: HexColor('614400')),
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20))),
+                                      child: Padding(
+                                        padding: EdgeInsets.all(10),
+                                        child: Text(
+                                          'Tiếp theo >>',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontFamily: 'LinotteBold',
+                                            color: HexColor('000000'),
+                                          ),
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        if (i < 10) {
+                                          i++;
+                                          setState(() {});
+                                        }
+                                      },
                                     ),
-                                  ),
-                                ),
-                                onPressed: () {
-                                  if (i < 10) {
-                                    i++;
-                                    setState(() {});
-                                  }
-                                },
-                              ),
-                            ):Container(),
+                                  )
+                                : Container(),
                           ],
                         ),
                       ],

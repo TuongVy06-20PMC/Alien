@@ -1,10 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:gamealien/object/User.dart';
+
 import 'package:hexcolor/hexcolor.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'ChinhSuaHoSo.dart';
+import 'object/User.dart';
 import 'object/level.dart';
 
 class HoSo extends StatefulWidget {
@@ -185,7 +186,6 @@ class _HoSoState extends State<HoSo> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                
                 children: [
                   IconButton(
                       onPressed: (() {

@@ -2,7 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:gamealien/trangchu.dart';
+import 'package:flutter_application_2/trangchu.dart';
+
 import 'package:hexcolor/hexcolor.dart';
 
 import 'package:intl/intl.dart';
@@ -10,7 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Alllevel.dart';
 import 'HoSo.dart';
-import 'components/TrangChuTabBarGoogle.dart';
+
 import 'menu.dart';
 import 'object/level.dart';
 

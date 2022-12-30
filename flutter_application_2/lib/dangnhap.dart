@@ -1,6 +1,4 @@
-import 'package:gamealien/object/User.dart';
-import 'package:gamealien/object/level.dart';
-import 'package:gamealien/trangchu.dart';
+import 'package:flutter_application_2/trangchu.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -9,6 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'Dialog/loading.dart';
 import 'Dialog/msg.dart';
 import 'dangky.dart';
+import 'object/User.dart';
 
 class DangNhap extends StatefulWidget {
   @override
@@ -231,8 +230,7 @@ class DangNhapState extends State<DangNhap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          const TrangChu()));
+                                      builder: (context) => const TrangChu()));
                             } else {
                               MsgDialog.showMsgDialog(context,
                                   'Email hoặc mật khẩu không đúng vui lòng thử lại');

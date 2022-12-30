@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:gamealien/trangchu.dart';
+import 'package:flutter_application_2/trangchu.dart';
 
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
@@ -10,7 +10,7 @@ import 'package:searchbar_animation/searchbar_animation.dart';
 
 import 'ChiTietTimKiem.dart';
 import 'TimKiem.dart';
-import 'components/TrangChuTabBarGoogle.dart';
+
 import 'object/User.dart';
 
 class TimKiemEmail extends StatefulWidget {

@@ -3,12 +3,13 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:gamealien/components/contact_object.dart';
-import 'package:gamealien/xemlaidapan.dart';
+import 'package:flutter_application_2/xemlaidapan.dart';
+
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 
 import 'canhan.dart';
+import 'component/contact_object.dart';
 import 'object/level.dart';
 
 class KetThucLuotChoi extends StatefulWidget {
@@ -49,10 +50,10 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
 
     if (this.widget.score > 150) {
       if (this.widget.you.capdo <= this.widget.level) {
-        int _total=this.widget.total+this.widget.score;
+        int _total = this.widget.total + this.widget.score;
         print(_total);
         data.update({
-            'total':_total,
+          'total': _total,
           'capdo': this.widget.level + 1,
           'level${this.widget.level + 1}': true,
           'score${this.widget.level}': this.widget.score,
@@ -113,9 +114,8 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       IconButton(
-                                        onPressed: () => {
-                                          Navigator.pop(context)
-                                        },
+                                        onPressed: () =>
+                                            {Navigator.pop(context)},
                                         icon: Image.asset(
                                           'assets/close-option.png',
                                           color: HexColor('FFDE00'),
@@ -461,9 +461,11 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                             Positioned(
                                                               child: IconButton(
                                                                   onPressed:
-                                                                      (){
-                                                                         Navigator.of(context).pop();
-                                                                      },
+                                                                      () {
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
                                                                   icon: Image
                                                                       .asset(
                                                                     'assets/close-option.png',
@@ -525,10 +527,11 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                                             ),
                                                                           ]),
                                                                     ),
-                                                                    onTap:
-                                                                        () {
-                                                                          Navigator.of(context).pop();
-                                                                        },
+                                                                    onTap: () {
+                                                                      Navigator.of(
+                                                                              context)
+                                                                          .pop();
+                                                                    },
                                                                   ),
                                                                 ],
                                                               ),

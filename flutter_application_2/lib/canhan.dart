@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:gamealien/ketthucluotchoi.dart';
-import 'package:gamealien/object/level.dart';
+
 import 'package:hexcolor/hexcolor.dart';
 import 'dart:math';
 import 'dart:async';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'components/contact_object.dart';
-import 'components/provider.dart';
+
+import 'component/contact_object.dart';
+import 'component/provider.dart';
+import 'ketthucluotchoi.dart';
+import 'object/level.dart';
 
 class MyWidget extends StatefulWidget {
   MyWidget({super.key, required this.level, required this.you});

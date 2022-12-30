@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:gamealien/HoSo.dart';
-import 'package:gamealien/object/level.dart';
-import 'package:gamealien/xephang.dart';
+import 'package:flutter_application_2/xephang.dart';
+
 import 'package:hexcolor/hexcolor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Alllevel.dart';
+import 'HoSo.dart';
 import 'ThongKe.dart';
 import 'TimKiem.dart';
 import 'menu.dart';
+import 'object/level.dart';
 
 class TrangChu extends StatefulWidget {
   const TrangChu({super.key});
