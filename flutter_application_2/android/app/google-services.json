@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "708487849133",
+    "project_id": "gamealien-824c8",
+    "storage_bucket": "gamealien-824c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708487849133:android:023529f8cf865b4abb9224",
+        "android_client_info": {
+          "package_name": "com.example.gamealien"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708487849133-l1spqhaqc6ko9mlf8pb0orheo968hc55.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKm6_2ikJlB1JXmRHua1ll9ktb1kSrC_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708487849133-l1spqhaqc6ko9mlf8pb0orheo968hc55.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
