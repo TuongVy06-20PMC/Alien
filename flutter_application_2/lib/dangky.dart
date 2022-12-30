@@ -355,7 +355,7 @@ class _DangKyState extends State<DangKy> {
                           level10: false,
                           score10: 0,
                           total: 0);
-                          createprf(temp, _id);
+                      createprf(temp, _id);
                       showDialog<String>(
                         context: context,
                         builder: (BuildContext context) => AlertDialog(
